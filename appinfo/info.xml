@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>twofactor_admin</id>
+	<name>Two-Factor Admin Support</name>
+	<summary>A two-factor auth support provider for admins</summary>
+	<description>Allows admins to generate (temporary) codes for users to log in if they are locked out of their account.</description>
+	<version>0.0.1</version>
+	<licence>agpl</licence>
+	<author>Christoph Wurst</author>
+	<category>security</category>
+	<dependencies>
+		<nextcloud min-version="15" max-version="15" />
+	</dependencies>
+</info>
