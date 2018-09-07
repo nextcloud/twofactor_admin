@@ -1,15 +1,26 @@
 <?xml version="1.0"?>
-<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>twofactor_admin</id>
 	<name>Two-Factor Admin Support</name>
 	<summary>A two-factor auth support provider for admins</summary>
-	<description>Allows admins to generate (temporary) codes for users to log in if they are locked out of their account.</description>
-	<version>0.0.1</version>
+	<description>Allows admins to generate (temporary) codes for users to log in
+		if they are locked out of their account.
+	</description>
+	<version>0.0.3</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
+	<namespace>TwoFactorAdmin</namespace>
 	<category>security</category>
 	<dependencies>
-		<nextcloud min-version="15" max-version="15" />
+		<nextcloud min-version="15" max-version="15"/>
 	</dependencies>
+
+	<two-factor-providers>
+		<provider>OCA\TwoFactorAdmin\Provider\AdminProvider</provider>
+	</two-factor-providers>
+
+	<commands>
+		<command>OCA\TwoFactorAdmin\Command\Generate</command>
+	</commands>
 </info>
