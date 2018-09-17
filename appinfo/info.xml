@@ -11,6 +11,7 @@
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<namespace>TwoFactorAdmin</namespace>
+	<documentation>https://nextcloud-twofactor-admin.readthedocs.io/en/latest/</documentation>
 	<category>security</category>
 	<dependencies>
 		<nextcloud min-version="15" max-version="15"/>
