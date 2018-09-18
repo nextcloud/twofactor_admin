@@ -112,4 +112,16 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 		$this->assertFalse($result);
 	}
 
+	public function testIsTwoFactorAuthEnabled() {
+		$user = $this->createMock(IUser::class);
+		$this->codeStorage->expects($this->once())
+			->method('hasCode')
+			->with($user)
+			->willReturn(true);
+
+		$enabled = $this->provider->isTwoFactorAuthEnabledForUser($user);
+
+		$this->assertTrue($enabled);
+	}
+
 }
