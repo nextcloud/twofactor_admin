@@ -1,0 +1,20 @@
+build:
+    nodes:
+        analysis:
+            tests:
+                override:
+                    - php-scrutinizer-run --enable-security-analysis
+
+filter:
+    excluded_paths:
+        - 'l10n/*'
+        - 'tests/'
+        - 'vendor/*'
+
+checks:
+    php: true
+
+tools:
+    external_code_coverage:
+        runs: 3
+        timeout: 1200 # Timeout in seconds. 20 minutes
