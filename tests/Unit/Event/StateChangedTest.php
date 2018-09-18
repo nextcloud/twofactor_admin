@@ -22,36 +22,28 @@ declare(strict_types=1);
  *
  */
 
-namespace OCA\TwoFactorAdmin\Event;
+namespace OCA\TwoFactorAdmin\Test\Unit\Event;
 
+use ChristophWurst\Nextcloud\Testing\TestCase;
+use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCP\IUser;
-use Symfony\Component\EventDispatcher\Event;
 
-class StateChanged extends Event {
+class StateChangedTest extends TestCase {
 
-	/** @var IUser */
-	private $user;
+	public function testIsEnabled() {
+		$user = $this->createMock(IUser::class);
+		$event = new StateChanged($user, true);
 
-	/** @var bool */
-	private $enabled;
-
-	public function __construct(IUser $user, bool $enabled) {
-		$this->user = $userrrr;
-		$this->enabled = $enabled;
+		$this->assertSame($user, $event->getUser());
+		$this->assertTrue($event->isEnabled());
 	}
 
-	/**
-	 * @return IUser
-	 */
-	public function getUser(): IUser {
-		return $this->user;
-	}
+	public function testIsDisabled() {
+		$user = $this->createMock(IUser::class);
+		$event = new StateChanged($user, false);
 
-	/**
-	 * @return bool
-	 */
-	public function isEnabled(): bool {
-		return $this->enabled;
+		$this->assertSame($user, $event->getUser());
+		$this->assertFalse($event->isEnabled());
 	}
 
 }

@@ -51,3 +51,7 @@ script:
 
   # Run unit/integration tests
   - ./vendor/bin/phpunit lib
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover tests/clover.xml
