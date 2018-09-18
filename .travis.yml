@@ -1,0 +1,55 @@
+language: php
+php:
+  - 7.0
+  - 7.1
+  - 7.2
+  - nightly
+
+env:
+  global:
+  - SERVER_BRANCH=master
+  matrix:
+  - DB=sqlite
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+  - "$HOME/.composer/cache/files"
+
+before_install:
+  # Make sure composer is up to date
+  - composer self-update
+
+  # Check out the Nextcloud server via git
+  - cd ..
+  - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $SERVER_BRANCH
+  - mv twofactor_admin server/apps/
+
+install:
+  # Install the server
+  - php -f server/occ maintenance:install --database-name nc_autotest --database-user nc_autotest --admin-user admin --admin-pass admin --database $DB --database-pass=''
+
+  # Enable debug mode to get more info in case a test fails
+  - php -f server/occ config:system:set debug --value=true --type boolean
+
+  # Install composer dependencies
+  - pushd server/apps/twofactor_admin
+  - composer install
+  - popd
+
+  # Set up app
+  - php -f server/occ app:enable twofactor_admin
+
+before_script:
+  # Switch bach to the app directory
+  - cd server/apps/twofactor_admin
+
+script:
+  # Lint php files
+  - find . -name \*.php -not -path './vendor/*' -exec php -l "{}" \;
+
+  # Run unit/integration tests
+  - ./vendor/bin/phpunit lib

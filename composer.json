@@ -1,0 +1,16 @@
+{
+    "name": "nextcloud/twofactor_admin",
+    "description": "Nextcloud Two-Factor Authentication Admin Provider",
+    "type": "library",
+    "license": "AGPL-v3",
+    "authors": [
+        {
+            "name": "Christoph Wurst",
+            "email": "christoph@winzerhof-wurst.at"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "christophwurst/nextcloud_testing": "^0.4.0"
+    }
+}
