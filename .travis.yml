@@ -50,7 +50,7 @@ script:
   - find . -name \*.php -not -path './vendor/*' -exec php -l "{}" \;
 
   # Run unit/integration tests
-  - ./vendor/bin/phpunit lib
+  - ./vendor/bin/phpunit -c tests/phpunit.xml
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
