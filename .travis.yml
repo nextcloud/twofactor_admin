@@ -19,12 +19,11 @@ cache:
   - "$HOME/.composer/cache/files"
 
 before_install:
-  # Make sure composer is up to date
-  - composer self-update
-
   # Check out the Nextcloud server via git
   - cd ..
   - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $SERVER_BRANCH
+
+  # Move the app under test into Nextcloud's `apps` directory
   - mv twofactor_admin server/apps/
 
 install:
