@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1817f50265786ea120266051ebcb12f",
+    "content-hash": "70376f5dd8fbfeb7f176e4a83bb190de",
     "packages": [],
     "packages-dev": [
         {
             "name": "christophwurst/nextcloud_testing",
-            "version": "0.5.0",
+            "version": "0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristophWurst/nextcloud_testing.git",
-                "reference": "141d9b63b74566f16a6e144d1a8fac7a87685039"
+                "reference": "da0843cbd60f2e9e6bc462e78e09e4cf979f1c75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_testing/zipball/141d9b63b74566f16a6e144d1a8fac7a87685039",
-                "reference": "141d9b63b74566f16a6e144d1a8fac7a87685039",
+                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_testing/zipball/da0843cbd60f2e9e6bc462e78e09e4cf979f1c75",
+                "reference": "da0843cbd60f2e9e6bc462e78e09e4cf979f1c75",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 }
             ],
             "description": "Simple and fast unit and integration testing framework for Nextcloud, based on PHPUnit",
-            "time": "2018-09-18T06:57:31+00:00"
+            "time": "2018-09-18T08:38:33+00:00"
         },
         {
             "name": "doctrine/instantiator",
