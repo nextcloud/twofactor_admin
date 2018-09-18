@@ -36,7 +36,7 @@ class StateChanged extends Event {
 	private $enabled;
 
 	public function __construct(IUser $user, bool $enabled) {
-		$this->user = $userrrr;
+		$this->user = $user;
 		$this->enabled = $enabled;
 	}
 
