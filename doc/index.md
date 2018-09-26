@@ -1,4 +1,4 @@
-# Nextcloud Two-Factor Admin Support Provider
+# Documentation
 
 This is the official documentation of the `twofactor_admin` Nextcloud app. This app
 allows admins to generate a one-time login code for users which they can use to
