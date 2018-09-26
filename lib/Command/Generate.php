@@ -68,6 +68,8 @@ class Generate extends Command {
 
 		$code = $this->codeStorage->generateCode($user);
 		$output->writeln("Generated new one-time code for <options=bold>$userId</>: <info>$code</info>");
+		$ttlInHours = CodeStorage::CODE_TTL / 3600;
+		$output->writeln("This code is valid for $ttlInHours hours.");
 
 		return 0;
 	}

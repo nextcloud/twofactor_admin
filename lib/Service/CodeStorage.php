@@ -29,11 +29,14 @@ use OCA\TwoFactorAdmin\Db\CodeMapper;
 use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IUser;
 use OCP\Security\ISecureRandom;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CodeStorage {
+
+	const CODE_TTL = 3600 * 48;
 
 	/** @var CodeMapper */
 	private $codeMapper;
@@ -44,12 +47,17 @@ class CodeStorage {
 	/** @var EventDispatcherInterface */
 	private $eventDispatcher;
 
+	/** @var ITimeFactory */
+	private $timeFactory;
+
 	public function __construct(CodeMapper $codeMapper,
 								ISecureRandom $random,
-								EventDispatcherInterface $eventDispatcher) {
+								EventDispatcherInterface $eventDispatcher,
+								ITimeFactory $timeFactory) {
 		$this->codeMapper = $codeMapper;
 		$this->random = $random;
 		$this->eventDispatcher = $eventDispatcher;
+		$this->timeFactory = $timeFactory;
 	}
 
 	public function generateCode(IUser $user): string {
@@ -58,6 +66,7 @@ class CodeStorage {
 		$dbCode = new Code();
 		$dbCode->setUserId($user->getUID());
 		$dbCode->setCode($code);
+		$dbCode->setExpires($this->timeFactory->getTime() + self::CODE_TTL);
 		$this->codeMapper->deleteAll($user);
 		$this->codeMapper->insert($dbCode);
 
@@ -87,7 +96,7 @@ class CodeStorage {
 
 			$this->eventDispatcher->dispatch(StateChanged::class, new StateChanged($user, false));
 
-			return true;
+			return $dbCode->getExpires() >= $this->timeFactory->getTime();
 		} else {
 			return false;
 		}

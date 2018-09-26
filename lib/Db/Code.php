@@ -31,10 +31,13 @@ use OCP\AppFramework\Db\Entity;
  * @method void setUserId(string $id)
  * @method string getCode()
  * @method void setCode(string $id)
+ * @method int getExpires()
+ * @method void setExpires(int $expires)
  */
 class Code extends Entity {
 
 	protected $userId;
 	protected $code;
+	protected $expires;
 
 }

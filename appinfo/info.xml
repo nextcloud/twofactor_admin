@@ -7,7 +7,7 @@
 	<description>Allows admins to generate (temporary) codes for users to log in
 		if they are locked out of their account.
 	</description>
-	<version>0.0.3</version>
+	<version>0.1.0</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<namespace>TwoFactorAdmin</namespace>

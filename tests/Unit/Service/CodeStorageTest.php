@@ -30,6 +30,7 @@ use OCA\TwoFactorAdmin\Db\CodeMapper;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
+use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\IUser;
 use OCP\Security\ISecureRandom;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -49,17 +50,22 @@ class CodeStorageTest extends TestCase {
 	/** @var CodeStorage|MockObject */
 	private $codeStorage;
 
+	/** @var ITimeFactory|MockObject */
+	private $timeFactory;
+
 	protected function setUp() {
 		parent::setUp();
 
 		$this->codeMapper = $this->createMock(CodeMapper::class);
 		$this->random = $this->createMock(ISecureRandom::class);
 		$this->eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+		$this->timeFactory = $this->createMock(ITimeFactory::class);
 
 		$this->codeStorage = new CodeStorage(
 			$this->codeMapper,
 			$this->random,
-			$this->eventDispatcher
+			$this->eventDispatcher,
+			$this->timeFactory
 		);
 	}
 
@@ -126,14 +132,36 @@ class CodeStorageTest extends TestCase {
 		$this->assertFalse($valid);
 	}
 
-	public function testValidateValidCode() {
+	public function testValidateExpiredCode() {
 		$user = $this->createMock(IUser::class);
 		$dbCode = new Code();
 		$dbCode->setCode("123456");
+		$dbCode->setExpires(1000);
 		$this->codeMapper->expects($this->once())
 			->method("find")
 			->with($user)
 			->willReturn($dbCode);
+		$this->timeFactory->expects($this->once())
+			->method('getTime')
+			->willReturn(1100);
+
+		$valid = $this->codeStorage->validateCode($user, "123456");
+
+		$this->assertFalse($valid);
+	}
+
+	public function testValidateValidCode() {
+		$user = $this->createMock(IUser::class);
+		$dbCode = new Code();
+		$dbCode->setCode("123456");
+		$dbCode->setExpires(1000);
+		$this->codeMapper->expects($this->once())
+			->method("find")
+			->with($user)
+			->willReturn($dbCode);
+		$this->timeFactory->expects($this->once())
+			->method('getTime')
+			->willReturn(900);
 
 		$valid = $this->codeStorage->validateCode($user, "123456");
 
