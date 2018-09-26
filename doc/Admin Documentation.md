@@ -14,3 +14,6 @@ Once this app is enabled, it provides a `twofactorauth:admin:generate-code` comm
 ```
 
 where "leonida" is the user ID for which a one-time login could shall be generated.
+
+The command will tell you the newly generated code as well as its expiry date. You may
+now transfer this code to the user via a trusted and secure channel.
