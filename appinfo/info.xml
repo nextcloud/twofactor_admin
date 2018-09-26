@@ -3,16 +3,22 @@
 	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>twofactor_admin</id>
 	<name>Two-Factor Admin Support</name>
-	<summary>A two-factor auth support provider for admins</summary>
-	<description>Allows admins to generate (temporary) codes for users to log in
-		if they are locked out of their account.
+	<summary>Nextcloud Two-Factor Authentication Admin Support Provider</summary>
+	<description>This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time
+		code for users to log into a 2FA protected account. This is helpful in situations where
+		users have lost access to their other 2FA methods or mandatory 2FA without any previously
+		enabled 2FA provider.
 	</description>
 	<version>0.0.3</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<namespace>TwoFactorAdmin</namespace>
-	<documentation>https://nextcloud-twofactor-admin.readthedocs.io/en/latest/</documentation>
+	<documentation>
+		<user>https://nextcloud-twofactor-admin.readthedocs.io/en/latest/User%20Documentation/</user>
+		<admin>https://nextcloud-twofactor-admin.readthedocs.io/en/latest/Admin%20Documentation/</admin>
+	</documentation>
 	<category>security</category>
+	<bugs>https://github.com/ChristophWurst/twofactor_admin/issues</bugs>
 	<dependencies>
 		<nextcloud min-version="15" max-version="15"/>
 	</dependencies>
