@@ -92,6 +92,7 @@ class GenerateTest extends TestCase {
 
 		$output = $this->command->getDisplay();
 		$this->assertContains("Generated new one-time code for user1: 123456", $output);
+		$this->assertContains("This code is valid for", $output);
 		$this->assertEquals(0, $ec);
 	}
 
@@ -117,6 +118,7 @@ class GenerateTest extends TestCase {
 		$output = $this->command->getDisplay();
 		$this->assertContains("There is an existing code that will be overwritten.", $output);
 		$this->assertContains("Generated new one-time code for user1: 123456", $output);
+		$this->assertContains("This code is valid for", $output);
 		$this->assertEquals(0, $ec);
 	}
 

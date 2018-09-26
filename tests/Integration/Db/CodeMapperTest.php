@@ -58,6 +58,7 @@ class CodeMapperTest extends TestCase {
 		$code = new Code();
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
+		$code->setExpires(time());
 		$this->mapper->insert($code);
 
 		$exists = $this->mapper->entryExists($user);
@@ -70,6 +71,7 @@ class CodeMapperTest extends TestCase {
 		$code = new Code();
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
+		$code->setExpires(time());
 		$this->mapper->insert($code);
 
 		$exists = $this->mapper->entryExists($user);
@@ -91,6 +93,7 @@ class CodeMapperTest extends TestCase {
 		$code = new Code();
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
+		$code->setExpires(time());
 		$this->mapper->insert($code);
 
 		$result = $this->mapper->find($user);
@@ -103,6 +106,7 @@ class CodeMapperTest extends TestCase {
 		$code = new Code();
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
+		$code->setExpires(time());
 		$this->mapper->insert($code);
 
 		$this->mapper->deleteAll($user);
