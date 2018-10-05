@@ -17,6 +17,6 @@
     "require": {},
     "require-dev": {
         "christophwurst/nextcloud_testing": "^0.5",
-        "christophwurst/nextcloud": "^14.0"
+        "christophwurst/nextcloud": "^13.0"
     }
 }
