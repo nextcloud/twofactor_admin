@@ -20,7 +20,7 @@
 	<category>security</category>
 	<bugs>https://github.com/ChristophWurst/twofactor_admin/issues</bugs>
 	<dependencies>
-		<nextcloud min-version="15" max-version="15"/>
+		<nextcloud min-version="14" max-version="15"/>
 	</dependencies>
 
 	<two-factor-providers>

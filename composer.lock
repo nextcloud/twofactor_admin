@@ -4,29 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd9107f99d0c91a1c9cb35982d67293b",
+    "content-hash": "96ce11c47cdf4f92209cc464eebfbd71",
     "packages": [],
     "packages-dev": [
         {
             "name": "christophwurst/nextcloud",
-            "version": "14.0.0",
+            "version": "13.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristophWurst/nextcloud_composer.git",
-                "reference": "3adf5ad0ecef6b3fa82636d0e6cf09d456f188cf"
+                "reference": "dcfe63673eed9a9a7971a96219055080868942fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/3adf5ad0ecef6b3fa82636d0e6cf09d456f188cf",
-                "reference": "3adf5ad0ecef6b3fa82636d0e6cf09d456f188cf",
+                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/dcfe63673eed9a9a7971a96219055080868942fb",
+                "reference": "dcfe63673eed9a9a7971a96219055080868942fb",
                 "shasum": ""
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "14.0.0-dev"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "AGPL-3.0-or-later"
@@ -38,7 +33,7 @@
                 }
             ],
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
-            "time": "2018-09-17T12:48:04+00:00"
+            "time": "2018-04-26T12:12:23+00:00"
         },
         {
             "name": "christophwurst/nextcloud_testing",
