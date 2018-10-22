@@ -27,6 +27,7 @@ namespace OCA\TwoFactorAdmin\Test\Unit\Provider;
 use OCA\TwoFactorAdmin\Provider\AdminProvider;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\IL10N;
+use OCP\IURLGenerator;
 use OCP\IUser;
 use OCP\Template;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -35,6 +36,9 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 
 	/** @var IL10N|MockObject */
 	private $l10n;
+
+	/** @var IURLGenerator|MockObject */
+	private $urlGenerator;
 
 	/** @var CodeStorage|MockObject */
 	private $codeStorage;
@@ -46,11 +50,13 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 		parent::setUp();
 
 		$this->l10n = $this->createMock(IL10N::class);
+		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->codeStorage = $this->createMock(CodeStorage::class);
 
 		$this->provider = new AdminProvider(
 			'twofactor_admin',
 			$this->l10n,
+			$this->urlGenerator,
 			$this->codeStorage
 		);
 	}
@@ -122,6 +128,28 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 		$enabled = $this->provider->isTwoFactorAuthEnabledForUser($user);
 
 		$this->assertTrue($enabled);
+	}
+
+	public function testGetDarkIcon() {
+		$this->urlGenerator->expects($this->once())
+			->method('imagePath')
+			->with('core', 'actions/more.svg')
+			->willReturn('/path/to/image.svg');
+
+		$path = $this->provider->getDarkIcon();
+
+		$this->assertSame('/path/to/image.svg', $path);
+	}
+
+	public function testGetLightIcon() {
+		$this->urlGenerator->expects($this->once())
+			->method('imagePath')
+			->with('core', 'actions/more-white.svg')
+			->willReturn('/path/to/image.svg');
+
+		$path = $this->provider->getLightIcon();
+
+		$this->assertSame('/path/to/image.svg', $path);
 	}
 
 }
