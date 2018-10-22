@@ -2,10 +2,14 @@
 style('twofactor_admin', 'challenge');
 ?>
 
+<img class="two-factor-icon" src="<?php print_unescaped(image_path('server', 'actions/more-white.svg')); ?>" alt="">
+
 <form method="POST"
 	  id="admin-2fa-form">
-	<p><?php p($l->t('Enter the one-time code provided by your admin.')) ?></p>
-	<p><?php p($l->t('Once logged in, please check your two-factor settings in order to be able to log in again.')) ?></p>
+	<p>
+		<?php p($l->t('Enter the one-time code provided by your admin.')) ?>
+		<?php p($l->t('Once logged in, please check your two-factor settings in order to be able to log in again.')) ?>
+	</p>
 	<input type="tel"
 		   minlength="6"
 		   maxlength="6"
@@ -15,7 +19,8 @@ style('twofactor_admin', 'challenge');
 		   autocomplete="off"
 		   autocapitalize="off"
 		   placeholder="<?php p($l->t('Authentication code')) ?>">
-	<button type="submit">
-		<span><?php p($l->t('Submit')); ?></span>
+	<button class="primary two-factor-submit"
+			type="submit">
+		<?php p($l->t('Submit')); ?>
 	</button>
 </form>
