@@ -24,13 +24,16 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorAdmin\Provider;
 
+use function image_path;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\Authentication\TwoFactorAuth\IProvider;
+use OCP\Authentication\TwoFactorAuth\IProvidesIcons;
 use OCP\IL10N;
+use OCP\IURLGenerator;
 use OCP\IUser;
 use OCP\Template;
 
-class AdminProvider implements IProvider {
+class AdminProvider implements IProvider, IProvidesIcons {
 
 	/** @var string */
 	private $appName;
@@ -38,14 +41,19 @@ class AdminProvider implements IProvider {
 	/** @var IL10N */
 	private $l10n;
 
+	/** @var IURLGenerator */
+	private $urlGenerator;
+
 	/** @var CodeStorage */
 	private $codeStorage;
 
 	public function __construct(string $appName,
 								IL10N $l10n,
+								IURLGenerator $urlGenerator,
 								CodeStorage $codeStorage) {
 		$this->appName = $appName;
 		$this->l10n = $l10n;
+		$this->urlGenerator = $urlGenerator;
 		$this->codeStorage = $codeStorage;
 	}
 
@@ -110,4 +118,11 @@ class AdminProvider implements IProvider {
 		return $this->codeStorage->hasCode($user);
 	}
 
+	public function getLightIcon(): String {
+		return $this->urlGenerator->imagePath('core', 'actions/more-white.svg');
+	}
+
+	public function getDarkIcon(): String {
+		return $this->urlGenerator->imagePath('core', 'actions/more.svg');
+	}
 }
