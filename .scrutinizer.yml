@@ -16,5 +16,5 @@ checks:
 
 tools:
     external_code_coverage:
-        runs: 5
+        runs: 3
         timeout: 1200 # Timeout in seconds. 20 minutes
