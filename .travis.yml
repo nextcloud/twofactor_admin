@@ -3,13 +3,14 @@ php:
   - 7.0
   - 7.1
   - 7.2
+  - 7.3
 
 matrix:
   include:
-  #- php: 7.2
-  #  env: "DB=sqlite SERVER_BRANCH=v14.0.0"
-  #- php: 7.2
-  #  env: "DB=sqlite SERVER_BRANCH=stable14"
+  - php: 7.2
+    env: "DB=sqlite SERVER_BRANCH=v15.0.0RC1 "
+  - php: 7.2
+    env: "DB=sqlite SERVER_BRANCH=stable15"
 
 env:
   global:
