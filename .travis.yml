@@ -8,12 +8,17 @@ matrix:
   include:
   - php: 7.2
     env: "DB=sqlite SERVER_BRANCH=v16.0.0alpha1"
+  - php: 7.2
+    env: "DB=mysql"
 
 env:
   global:
   - SERVER_BRANCH=master
   matrix:
   - DB=sqlite
+
+addons:
+  mariadb: '10.1'
 
 branches:
   only:
@@ -25,6 +30,9 @@ cache:
   - "$HOME/.composer/cache/files"
 
 before_install:
+  - php --version
+  - mysql --version
+
   # Check out the Nextcloud server via git
   - cd ..
   - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $SERVER_BRANCH
@@ -33,6 +41,11 @@ before_install:
   - mv twofactor_admin server/apps/
 
 install:
+  # Install the db
+  - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e 'create database nc_autotest;'; fi
+  - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "CREATE USER 'nc_autotest'@'localhost' IDENTIFIED BY '';"; fi
+  - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "GRANT ALL ON nc_autotest.* TO 'nc_autotest'@'localhost';"; fi
+
   # Install the server
   - php -f server/occ maintenance:install --database-name nc_autotest --database-user nc_autotest --admin-user admin --admin-pass admin --database $DB --database-pass=''
 
