@@ -4,30 +4,30 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36234d0dd004df65b029ed4854890430",
+    "content-hash": "294d0615c302537a14e8ca71fb55724b",
     "packages": [],
     "packages-dev": [
         {
             "name": "christophwurst/nextcloud",
-            "version": "dev-master",
+            "version": "v16.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristophWurst/nextcloud_composer.git",
-                "reference": "3f7b7b87d41d180483526ae080f2f3ade92d3bd3"
+                "reference": "6ca36fe8d8890635ee4902d8a98809d94fca5a4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/3f7b7b87d41d180483526ae080f2f3ade92d3bd3",
-                "reference": "3f7b7b87d41d180483526ae080f2f3ade92d3bd3",
+                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/6ca36fe8d8890635ee4902d8a98809d94fca5a4c",
+                "reference": "6ca36fe8d8890635ee4902d8a98809d94fca5a4c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "15.0.0-dev"
+                    "dev-master": "16.0.0-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
-            "time": "2018-10-23T16:10:19+00:00"
+            "time": "2019-03-19T07:46:47+00:00"
         },
         {
             "name": "christophwurst/nextcloud_testing",
@@ -1653,13 +1653,13 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "christophwurst/nextcloud": 20
+        "christophwurst/nextcloud": 15
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.0"
+        "php": "7.1"
     }
 }
