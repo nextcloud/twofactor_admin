@@ -11,7 +11,7 @@
     ],
     "config": {
         "platform": {
-            "php": "7.0"
+            "php": "7.1"
         }
     },
     "scripts": {
@@ -24,6 +24,6 @@
     "require": {},
     "require-dev": {
         "christophwurst/nextcloud_testing": "^0.5",
-        "christophwurst/nextcloud": "dev-master"
+        "christophwurst/nextcloud": "v16.0.0-alpha1"
     }
 }
