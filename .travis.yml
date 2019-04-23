@@ -17,6 +17,8 @@ env:
   matrix:
   - DB=sqlite
 
+addons:
+  mariadb: '10.3'
 branches:
   only:
   - master
