@@ -7,7 +7,9 @@ php:
 matrix:
   include:
   - php: 7.2
-    env: "DB=sqlite SERVER_BRANCH=v16.0.0alpha1"
+    env: "DB=sqlite SERVER_BRANCH=stable16"
+  - php: 7.2
+    env: "DB=sqlite SERVER_BRANCH=16.0.0RC2"
   - php: 7.2
     env: "DB=mysql"
 
