@@ -56,6 +56,9 @@ class Version2Date20180926055748 extends SimpleMigrationStep {
 		$codesTable = $schema->getTable('twofactor_admin_codes');
 		$expiresCol = $codesTable->getColumn('expires');
 		$expiresCol->setNotnull(true);
+		$expiresCol->setDefault(0);
+		$idCol = $codesTable->getColumn('id');
+		$idCol->setAutoincrement(true);
 	}
 
 }
