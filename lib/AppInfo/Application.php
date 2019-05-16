@@ -30,8 +30,10 @@ use OCP\AppFramework\App;
 
 class Application extends App {
 
+	public const APP_ID = 'twofactor_admin';
+
 	public function __construct(array $urlParams = []) {
-		parent::__construct('twofactor_admin', $urlParams);
+		parent::__construct(self::APP_ID, $urlParams);
 
 		$container = $this->getContainer();
 

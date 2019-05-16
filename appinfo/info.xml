@@ -33,4 +33,8 @@
 	<commands>
 		<command>OCA\TwoFactorAdmin\Command\Generate</command>
 	</commands>
+
+	<settings>
+		<admin>OCA\TwoFactorAdmin\Settings\AdminSettings</admin>
+	</settings>
 </info>

@@ -1,6 +1,8 @@
 [package]
 before_cmds = [
 	"composer install --no-dev -o",
+	"npm i",
+	"npm run build",
 ]
 
 exclude = [
@@ -23,6 +25,7 @@ exclude = [
 	"phpunit*xml",
 	"screenshots",
 	".scrutinizer.yml",
+	"src",
 	"tests",
 	".travis.yml",
 	".tx",

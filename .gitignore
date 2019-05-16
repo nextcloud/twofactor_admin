@@ -2,6 +2,9 @@
 
 composer.phar
 /vendor/
+/node_modules
+
+/js
 
 /tests/clover.xml
 
