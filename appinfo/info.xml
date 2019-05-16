@@ -9,7 +9,7 @@
 		users have lost access to their other 2FA methods or mandatory 2FA without any previously
 		enabled 2FA provider.
 	</description>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<namespace>TwoFactorAdmin</namespace>
