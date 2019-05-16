@@ -6,16 +6,19 @@ php:
 
 matrix:
   include:
-  #- php: 7.2
-  #  env: "DB=sqlite SERVER_BRANCH=v14.0.0"
-  #- php: 7.2
-  #  env: "DB=sqlite SERVER_BRANCH=stable14"
+  - php: 7.2
+    env: "DB=sqlite SERVER_BRANCH=v15.0.0"
+  - php: 7.2
+    env: "DB=sqlite SERVER_BRANCH=stable15"
 
 env:
   global:
-  - SERVER_BRANCH=master
+  - SERVER_BRANCH=stable15
   matrix:
   - DB=sqlite
+
+addons:
+  mariadb: '10.3'
 
 branches:
   only:
