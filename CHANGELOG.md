@@ -1,6 +1,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 0.4.0 – 2019-06-25
+### Added
+- Nextcloud 17 support
+- Ability to create codes from the web UI
+### Fixed
+- Compatibility with Mysql 10.2+
+
 ## 0.3.0 – 2018-11-20
 ### Added
 - php7.3 support
