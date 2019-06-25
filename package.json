@@ -1,6 +1,6 @@
 {
   "name": "nextcloud-twofactor-admin",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Nextcloud Admin Two-Factor Authentication Support Provider",
   "main": "src/main-admin-settings.js",
   "directories": {
