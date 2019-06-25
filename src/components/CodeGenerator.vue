@@ -45,7 +45,7 @@
 </template>
 
 <script>
-	import {translate as t} from 'nextcloud-server/dist/l10n'
+	import {translate as t} from 'nextcloud-l10n'
 
 	import {generateCode} from '../service/AdminCodeService'
 

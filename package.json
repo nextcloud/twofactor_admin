@@ -9,7 +9,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --progress --config src/webpack.prod.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "dev": "webpack --progress --watch --config src/webpack.dev.js",
+    "test": "NODE_ENV=test nyc mocha-webpack --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js",
+    "test:watch": "mocha-webpack -w --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,8 @@
   "homepage": "https://github.com/ChristophWurst/twofactor_admin#readme",
   "dependencies": {
     "nextcloud-axios": "^0.2.0",
-    "nextcloud-server": "^0.15.9",
+    "nextcloud-l10n": "0.0.1",
+    "nextcloud-router": "0.0.6",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -39,12 +44,5 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-merge": "^4.2.1"
-  },
-  "scripts": {
-    "build": "webpack --progress --config src/webpack.prod.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "webpack --progress --watch --config src/webpack.dev.js",
-    "test": "NODE_ENV=test nyc mocha-webpack --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js",
-    "test:watch": "mocha-webpack -w --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js"
   }
 }
