@@ -1,6 +1,6 @@
 {
   "name": "nextcloud-twofactor-admin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Nextcloud Admin Two-Factor Authentication Support Provider",
   "main": "src/main-admin-settings.js",
   "directories": {
@@ -9,7 +9,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --progress --config src/webpack.prod.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "dev": "webpack --progress --watch --config src/webpack.dev.js",
+    "test": "NODE_ENV=test nyc mocha-webpack --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js",
+    "test:watch": "mocha-webpack -w --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -39,12 +43,5 @@
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6",
     "webpack-merge": "^4.2.1"
-  },
-  "scripts": {
-    "build": "webpack --progress --config src/webpack.prod.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "dev": "webpack --progress --watch --config src/webpack.dev.js",
-    "test": "NODE_ENV=test nyc mocha-webpack --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js",
-    "test:watch": "mocha-webpack -w --webpack-config src/webpack.test.js --require src/tests/setup.js src/tests/**/*.spec.js"
   }
 }
