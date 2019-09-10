@@ -30,8 +30,8 @@ use OCA\TwoFactorAdmin\Listener\StateChangeRegistryUpdater;
 use OCA\TwoFactorAdmin\Provider\AdminProvider;
 use OCA\TwoFactorGateway\Service\Gateway\SMS\Provider\IProvider;
 use OCP\Authentication\TwoFactorAuth\IRegistry;
+use OCP\EventDispatcher\Event;
 use OCP\IUser;
-use Symfony\Component\EventDispatcher\Event;
 
 class StateChangeRegistryUpdaterTest extends TestCase {
 
