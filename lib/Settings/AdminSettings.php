@@ -28,8 +28,9 @@ namespace OCA\TwoFactorAdmin\Settings;
 use OCA\TwoFactorAdmin\AppInfo\Application;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\Settings\ISettings;
+use OCP\Settings\ISubAdminSettings;
 
-class AdminSettings implements ISettings {
+class AdminSettings implements ISubAdminSettings {
 
 	public function getForm() {
 		return new TemplateResponse(Application::APP_ID, 'settings-admin');
