@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 1.0.0 – 2019-09-10
+### Added
+- Nextcloud 18 support
+- Ability to generate codes on the UI as sub admin
+### Changed
+- New and updated translations
+### Removed
+- Nextcloud 16 support
+
 ## 0.4.1 – 2019-08-28
 ### Changed
 - New and updated translations
