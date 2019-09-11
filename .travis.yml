@@ -52,9 +52,9 @@ install:
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e 'create database nc_autotest;'; fi
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "CREATE USER 'nc_autotest'@'localhost' IDENTIFIED BY '';"; fi
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "GRANT ALL ON nc_autotest.* TO 'nc_autotest'@'localhost';"; fi
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS nc_autotest;" -U postgres; fi    
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database nc_autotest;" -U postgres; fi
-  - if [[ "$DB" == "pgsql" ]]; then psql -c "GRANT ALL ON nc_autotest.* TO 'nc_autotest'@'localhost';" -U postgres; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "CREATE DATABASE nc_autotest;" -U postgres; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "CREATE USER nc_autotest WITH PASSWORD '';" -U postgres; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "GRANT ALL PRIVILEGES ON DATABASE nc_autotest TO nc_autotest;" -U postgres; fifi
 
   # Install the server
   - php -f server/occ maintenance:install --database-name nc_autotest --database-user nc_autotest --admin-user admin --admin-pass admin --database $DB --database-pass=''
