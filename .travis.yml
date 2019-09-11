@@ -10,8 +10,12 @@ matrix:
     env: "DB=sqlite SERVER_BRANCH=stable17"
   - php: 7.3
     env: "DB=sqlite SERVER_BRANCH=v17.0.0beta4"
+  - php: 7.3
+    env: "DB=pgsql"
   - php: 7.2
     env: "DB=mysql"
+  - php: 7.2
+    env: "DB=pgsql"
 
 env:
   global:
@@ -20,6 +24,7 @@ env:
 
 addons:
   mariadb: '10.3'
+  postgresql: '11.5'
 
 branches:
   only:
@@ -33,6 +38,7 @@ cache:
 before_install:
   - php --version
   - mysql --version
+  - postgres --version
 
   # Check out the Nextcloud server via git
   - cd ..
@@ -46,6 +52,9 @@ install:
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e 'create database nc_autotest;'; fi
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "CREATE USER 'nc_autotest'@'localhost' IDENTIFIED BY '';"; fi
   - if [[ "$DB" == 'mysql' ]]; then mysql -u root -e "GRANT ALL ON nc_autotest.* TO 'nc_autotest'@'localhost';"; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS nc_autotest;" -U postgres; fi    
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database nc_autotest;" -U postgres; fi
+  - if [[ "$DB" == "pgsql" ]]; then psql -c "GRANT ALL ON nc_autotest.* TO 'nc_autotest'@'localhost';" -U postgres; fi
 
   # Install the server
   - php -f server/occ maintenance:install --database-name nc_autotest --database-user nc_autotest --admin-user admin --admin-pass admin --database $DB --database-pass=''
