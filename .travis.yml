@@ -14,8 +14,6 @@ matrix:
     env: "DB=pgsql"
   - php: 7.2
     env: "DB=mysql"
-  - php: 7.2
-    env: "DB=pgsql"
 
 env:
   global:
@@ -24,7 +22,7 @@ env:
 
 addons:
   mariadb: '10.3'
-  postgresql: '11.5'
+  postgresql: '9.5'
 
 branches:
   only:
