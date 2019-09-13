@@ -27,6 +27,8 @@ namespace OCA\TwoFactorAdmin\AppInfo;
 use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCA\TwoFactorAdmin\Listener\StateChangeRegistryUpdater;
 use OCP\AppFramework\App;
+use OCP\AppFramework\IAppContainer;
+use OCP\EventDispatcher\IEventDispatcher;
 
 class Application extends App {
 
@@ -36,18 +38,14 @@ class Application extends App {
 		parent::__construct(self::APP_ID, $urlParams);
 
 		$container = $this->getContainer();
+		$this->registerListeners($container);
+	}
 
-		$dispatcher = $container->getServer()->getEventDispatcher();
-		$dispatcher->addListener(StateChanged::class, function (StateChanged $event) use ($container) {
-			/** @var IListener[] $listeners */
-			$listeners = [
-				$container->query(StateChangeRegistryUpdater::class),
-			];
+	private function registerListeners(IAppContainer $container): void {
+		/** @var IEventDispatcher $dispatcher */
+		$dispatcher = $container->query(IEventDispatcher::class);
 
-			foreach ($listeners as $listener) {
-				$listener->handle($event);
-			}
-		});
+		$dispatcher->addServiceListener(StateChanged::class, StateChangeRegistryUpdater::class);
 	}
 
 }

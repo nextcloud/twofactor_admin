@@ -75,6 +75,8 @@
 					.catch(e => {
 						if (e.response && e.response.status === 404) {
 							this.error = t('twofactor_admin', 'user {uid} does not exist', {uid: this.uid})
+						} else if (e.response && e.response.status === 403) {
+							this.error = t('twofactor_admin', 'you are not allowed to generate codes for this user')
 						} else {
 							this.error = t('twofactor_admin', 'unknown error', {uid: this.uid})
 						}

@@ -1,6 +1,6 @@
 {
   "name": "nextcloud-twofactor-admin",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Nextcloud Admin Two-Factor Authentication Support Provider",
   "main": "src/main-admin-settings.js",
   "directories": {
@@ -29,20 +29,20 @@
   },
   "homepage": "https://github.com/ChristophWurst/twofactor_admin#readme",
   "dependencies": {
-    "nextcloud-axios": "^0.2.0",
+    "nextcloud-axios": "^0.2.1",
     "nextcloud-l10n": "0.0.1",
     "nextcloud-router": "0.0.6",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
-    "css-loader": "^2.1.1",
-    "vue-loader": "^15.7.0",
+    "css-loader": "^3.2.0",
+    "vue-loader": "^15.7.1",
     "vue-template-compiler": "^2.6.10",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-merge": "^4.2.1"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-merge": "^4.2.2"
   }
 }
