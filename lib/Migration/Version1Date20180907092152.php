@@ -43,7 +43,10 @@ class Version1Date20180907092152 extends SimpleMigrationStep {
 		$schema = $schemaClosure();
 
 		$table = $schema->getTable('twofactor_admin_codes');
-		$table->dropPrimaryKey();
+		$dbType = \OC::$server->getSystemConfig()->getValue('dbtype', 'sqlite');
+        	if ($dbType !== 'pgsql') {
+			$table->dropPrimaryKey();
+		}
 		$table->setPrimaryKey(['id', 'user_id']);
 
 		return $schema;
