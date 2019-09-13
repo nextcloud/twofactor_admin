@@ -79,6 +79,7 @@ class CodeMapper extends QBMapper {
 				$qb->createNamedParameter($user->getUID())
 			));
 		$delete->execute();
+		$this->db->commit();
 	}
 
 }

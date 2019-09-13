@@ -65,6 +65,7 @@ class Version2Date20180926053333 extends SimpleMigrationStep {
 		$twoDaysAgo = $now - 3600 * 48;
 
 		$this->fillExpireDates($qb, $twoDaysAgo);
+		$this->db->commit();
 	}
 
 	/**
