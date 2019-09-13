@@ -43,6 +43,7 @@ class Version0Date20180907071626 extends SimpleMigrationStep {
 		$schema = $schemaClosure();
 
 		$table = $schema->createTable('twofactor_admin_codes');
+		$dbType = \OC::$server->getSystemConfig()->getValue('dbtype', 'sqlite');
 		$table->addColumn('id', 'bigint', [
 			'autoincrement' => true,
 			'notnull' => true,
@@ -56,8 +57,9 @@ class Version0Date20180907071626 extends SimpleMigrationStep {
 			'notnull' => true,
 			'length' => 6,
 		]);
-		$table->setPrimaryKey(['id']);
-
+		if ($dbType !== 'pgsql') {
+			$table->setPrimaryKey(['id']);
+		}
 		return $schema;
 	}
 
