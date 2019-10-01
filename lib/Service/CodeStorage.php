@@ -30,9 +30,9 @@ use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IUser;
 use OCP\Security\ISecureRandom;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CodeStorage {
 
@@ -44,7 +44,7 @@ class CodeStorage {
 	/** @var ISecureRandom */
 	private $random;
 
-	/** @var EventDispatcherInterface */
+	/** @var IEventDispatcher */
 	private $eventDispatcher;
 
 	/** @var ITimeFactory */
@@ -52,7 +52,7 @@ class CodeStorage {
 
 	public function __construct(CodeMapper $codeMapper,
 								ISecureRandom $random,
-								EventDispatcherInterface $eventDispatcher,
+								IEventDispatcher $eventDispatcher,
 								ITimeFactory $timeFactory) {
 		$this->codeMapper = $codeMapper;
 		$this->random = $random;
