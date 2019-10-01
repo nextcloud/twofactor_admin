@@ -31,10 +31,10 @@ use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
 use OCP\AppFramework\Utility\ITimeFactory;
+use OCP\EventDispatcher\IEventDispatcher;
 use OCP\IUser;
 use OCP\Security\ISecureRandom;
 use PHPUnit\Framework\MockObject\MockObject;
-use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 class CodeStorageTest extends TestCase {
 
@@ -44,7 +44,7 @@ class CodeStorageTest extends TestCase {
 	/** @var ISecureRandom|MockObject */
 	private $random;
 
-	/** @var EventDispatcherInterface|MockObject */
+	/** @var IEventDispatcher|MockObject */
 	private $eventDispatcher;
 
 	/** @var CodeStorage|MockObject */
@@ -58,7 +58,7 @@ class CodeStorageTest extends TestCase {
 
 		$this->codeMapper = $this->createMock(CodeMapper::class);
 		$this->random = $this->createMock(ISecureRandom::class);
-		$this->eventDispatcher = $this->createMock(EventDispatcherInterface::class);
+		$this->eventDispatcher = $this->createMock(IEventDispatcher::class);
 		$this->timeFactory = $this->createMock(ITimeFactory::class);
 
 		$this->codeStorage = new CodeStorage(
