@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61c691bdb5a8d0d23964393c26f2e595",
+    "content-hash": "61fde2ed35875d119f76a0f943b9594e",
     "packages": [],
     "packages-dev": [
         {
             "name": "christophwurst/nextcloud",
-            "version": "v17.0.0-beta4",
+            "version": "v17.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristophWurst/nextcloud_composer.git",
-                "reference": "076e1d5f3c95f6b00ed558d594efc9dac137747c"
+                "reference": "717da841af036eecefbb934ac09ea6e5666522ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/076e1d5f3c95f6b00ed558d594efc9dac137747c",
-                "reference": "076e1d5f3c95f6b00ed558d594efc9dac137747c",
+                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/717da841af036eecefbb934ac09ea6e5666522ec",
+                "reference": "717da841af036eecefbb934ac09ea6e5666522ec",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                 }
             ],
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
-            "time": "2019-09-06T07:01:47+00:00"
+            "time": "2019-11-25T09:00:02+00:00"
         },
         {
             "name": "christophwurst/nextcloud_testing",
@@ -1606,8 +1606,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
@@ -1666,9 +1666,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "christophwurst/nextcloud": 10
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
