@@ -1,22 +1,25 @@
 language: php
 php:
-  - 7.1
   - 7.2
   - 7.3
+  - 7.4snapshot
 
 matrix:
   include:
   - php: 7.3
-    env: "DB=sqlite SERVER_BRANCH=stable17"
+    env: "CORE_BRANCH=stable17"
   - php: 7.3
-    env: "DB=sqlite SERVER_BRANCH=v17.0.0beta4"
+    env: "CORE_BRANCH=v17.0.0"
   - php: 7.2
     env: "DB=mysql"
+  - php: nightly
+    env: "PATCH_VERSION_CHECK=TRUE"
 
 env:
   global:
   - SERVER_BRANCH=master
   - DB=sqlite
+  - PATCH_VERSION_CHECK=FALSE
 
 addons:
   mariadb: '10.3'
@@ -37,6 +40,8 @@ before_install:
   # Check out the Nextcloud server via git
   - cd ..
   - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $SERVER_BRANCH
+  - if [[ "$PATCH_VERSION_CHECK" = "TRUE" ]]; then echo "<?php" > server/lib/versioncheck.php; fi
+  - if [[ "$PATCH_VERSION_CHECK" = "TRUE" ]]; then  sed -ri 's/(<php min\-version="[0-9\.]+") max\-version="[0-9\.]+"/\1/g' twofactor_admin/appinfo/info.xml; fi
 
   # Move the app under test into Nextcloud's `apps` directory
   - mv twofactor_admin server/apps/
