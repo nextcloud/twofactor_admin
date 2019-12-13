@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 – 2019-12-13
+### Added
+- php7.4 support
+### Changed
+- New and updated translations
+### Fixed
+- Event dispatcher incompatibility
+- JavaScript vulnerability in `serialize-javascript` dependency
+### Removed
+- php7.1
+
 ## 1.0.0 – 2019-09-10
 ### Added
 - Nextcloud 18 support
