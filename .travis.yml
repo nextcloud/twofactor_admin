@@ -9,14 +9,17 @@ jobs:
 
 matrix:
   include:
-  - php: 7.3
-    env: "CORE_BRANCH=stable17"
-  - php: 7.3
-    env: "CORE_BRANCH=v17.0.0"
-  - php: 7.2
-    env: "DB=mysql"
-  - php: nightly
-    env: "PATCH_VERSION_CHECK=TRUE"
+    - php: 7.3
+      env: "CORE_BRANCH=stable17"
+    - php: 7.3
+      env: "CORE_BRANCH=v17.0.0"
+    - php: 7.3
+      env: "CORE_BRANCH=stable18"
+    - php: 7.3
+      env: "CORE_BRANCH=v18.0.0"
+    - php: 7.2
+      env: "DB=mysql"
+  fast_finish: true
 
 env:
   global:
