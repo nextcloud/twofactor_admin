@@ -86,3 +86,6 @@ script:
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover tests/clover.xml
+
+after_failure:
+  - tail -n 25 ../../data/nextcloud.log
