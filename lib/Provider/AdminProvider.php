@@ -24,7 +24,6 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorAdmin\Provider;
 
-use function image_path;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\Authentication\TwoFactorAuth\IProvidesIcons;
