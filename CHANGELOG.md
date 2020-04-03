@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 – 2020-04-03
+### Added
+- Nextcloud 19 support
+### Changed
+- New and updated translations
+### Fixed
+- JavaScript vulnerabilities in dependency
+
 ## 2.0.0 – 2019-12-13
 ### Added
 - php7.4 support
