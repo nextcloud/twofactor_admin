@@ -31,7 +31,7 @@ use OCP\IUser;
 class CodeMapper extends QBMapper {
 
 	public function __construct(IDBConnection $db) {
-		parent::__construct($db, 'twofactor_admin_codes');
+		parent::__construct($db, 'twofactor_admincodes');
 	}
 
 	public function entryExists(IUser $user): bool {
