@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 – 2020-08-24
+### Added
+- Nextcloud 20 support
+### Changed
+- New and updated translations
+### Fixed
+- Database table layout (data loss unlikely but possible during migration)
+
 ## 2.1.0 – 2020-04-03
 ### Added
 - Nextcloud 19 support
