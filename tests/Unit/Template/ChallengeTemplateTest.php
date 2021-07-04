@@ -32,7 +32,7 @@ class ChallengeTemplateTest extends TestCase {
 	/** @var Template */
 	private $template;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->template = new Template("twofactor_admin", "challenge");

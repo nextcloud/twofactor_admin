@@ -39,7 +39,7 @@ class CodeMapperTest extends TestCase {
 	/** @var CodeMapper */
 	private $mapper;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->mapper = OC::$server->query(CodeMapper::class);

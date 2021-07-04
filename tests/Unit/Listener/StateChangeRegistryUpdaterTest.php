@@ -44,7 +44,7 @@ class StateChangeRegistryUpdaterTest extends TestCase {
 	/** @var StateChangeRegistryUpdater */
 	private $listener;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		$this->registry = $this->createMock(IRegistry::class);
 		$this->provider = $this->createMock(AdminProvider::class);
 

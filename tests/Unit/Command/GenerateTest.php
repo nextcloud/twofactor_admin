@@ -43,7 +43,7 @@ class GenerateTest extends TestCase {
 	/** @var CommandTester */
 	private $command;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->codeStorage = $this->createMock(CodeStorage::class);

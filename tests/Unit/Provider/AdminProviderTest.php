@@ -46,7 +46,7 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 	/** @var AdminProvider */
 	private $provider;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->l10n = $this->createMock(IL10N::class);

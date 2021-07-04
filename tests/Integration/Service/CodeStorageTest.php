@@ -38,7 +38,7 @@ class CodeStorageTest extends TestCase {
 	/** @var CodeStorage */
 	private $codeStorage;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->codeStorage = OC::$server->query(CodeStorage::class);
