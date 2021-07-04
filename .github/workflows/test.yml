@@ -1,0 +1,111 @@
+name: PHP Tests
+on:
+  push:
+    branches:
+      - master
+      - stable*
+  pull_request:
+
+env:
+  APP_NAME: twofactor_admin
+
+jobs:
+  test-php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.3', '7.4', '8.0']
+        databases: ['sqlite']
+        nextcloud-versions: ['stable20', 'stable21', 'stable22']
+    name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
+    steps:
+      - name: Checkout server
+        uses: actions/checkout@v2
+        with:
+          repository: nextcloud/server
+          ref: ${{ matrix.server-versions }}
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Checkout app
+        uses: actions/checkout@v2
+        with:
+          path: apps/${{ env.APP_NAME }}
+      - name: Set up php${{ matrix.php-versions }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, iconv, fileinfo, intl, sqlite, pdo_sqlite
+          tools: phpunit:9.5
+          coverage: none
+      - name: Install PHP dependencies
+        working-directory: apps/${{ env.APP_NAME }}
+        run: composer i
+      - name: Set up Nextcloud
+        env:
+          DB_PORT: 4444
+        run: |
+          mkdir data
+          ./occ maintenance:install --verbose --database=${{ matrix.databases }} --database-name=nextcloud --database-host=127.0.0.1 --database-port=$DB_PORT --database-user=root --database-pass=rootpassword --admin-user admin --admin-pass password
+          php -f index.php
+          ./occ app:enable --force ${{ env.APP_NAME }}
+      - name: PHPUnit
+        working-directory: apps/${{ env.APP_NAME }}
+        run: phpunit -c tests/phpunit.xml
+
+  test-php-mysql:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.3', '7.4', '8.0']
+        databases: ['mysql']
+        nextcloud-versions: ['stable20', 'stable21', 'stable22']
+    name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
+    services:
+      mysql:
+        image: mariadb
+        ports:
+          - 4444:3306/tcp
+        env:
+          MYSQL_ROOT_PASSWORD: rootpassword
+        options: --health-cmd="mysqladmin ping" --health-interval 5s --health-timeout 2s --health-retries 5
+    steps:
+      - name: Checkout server
+        uses: actions/checkout@v2
+        with:
+          repository: nextcloud/server
+          ref: ${{ matrix.server-versions }}
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+      - name: Checkout app
+        uses: actions/checkout@v2
+        with:
+          path: apps/${{ env.APP_NAME }}
+      - name: Set up php${{ matrix.php-versions }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: mbstring, iconv, fileinfo, intl, mysql, pdo_mysql
+          tools: phpunit:9.5
+          coverage: none
+      - name: Install PHP dependencies
+        working-directory: apps/${{ env.APP_NAME }}
+        run: composer i
+      - name: Set up Nextcloud
+        env:
+          DB_PORT: 4444
+        run: |
+          mkdir data
+          ./occ maintenance:install --verbose --database=${{ matrix.databases }} --database-name=nextcloud --database-host=127.0.0.1 --database-port=$DB_PORT --database-user=root --database-pass=rootpassword --admin-user admin --admin-pass password
+          php -f index.php
+          ./occ app:enable --force ${{ env.APP_NAME }}
+      - name: PHPUnit
+        working-directory: apps/${{ env.APP_NAME }}
+        run: phpunit -c tests/phpunit.xml
