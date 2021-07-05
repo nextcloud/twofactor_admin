@@ -53,7 +53,7 @@ class CodeStorageTest extends TestCase {
 	/** @var ITimeFactory|MockObject */
 	private $timeFactory;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->codeMapper = $this->createMock(CodeMapper::class);

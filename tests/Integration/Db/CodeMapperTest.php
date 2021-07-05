@@ -39,7 +39,7 @@ class CodeMapperTest extends TestCase {
 	/** @var CodeMapper */
 	private $mapper;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->mapper = OC::$server->query(CodeMapper::class);
@@ -79,10 +79,8 @@ class CodeMapperTest extends TestCase {
 		$this->assertTrue($exists);
 	}
 
-	/**
-	 * @expectedException \OCP\AppFramework\Db\DoesNotExistException
-	 */
 	public function testFindNotFound() {
+		$this->expectException(\OCP\AppFramework\Db\DoesNotExistException::class);
 		$user = $this->createTestUser();
 
 		$this->mapper->find($user);

@@ -43,7 +43,7 @@ class GenerateTest extends TestCase {
 	/** @var CommandTester */
 	private $command;
 
-	protected function setUp() {
+	protected function setUp(): void {
 		parent::setUp();
 
 		$this->codeStorage = $this->createMock(CodeStorage::class);
@@ -67,7 +67,7 @@ class GenerateTest extends TestCase {
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertContains("Invalid UID", $output);
+		$this->assertStringContainsString("Invalid UID", $output);
 		$this->assertEquals(1, $ec);
 	}
 
@@ -91,8 +91,8 @@ class GenerateTest extends TestCase {
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertContains("Generated new one-time code for user1: 123456", $output);
-		$this->assertContains("This code is valid for", $output);
+		$this->assertStringContainsString("Generated new one-time code for user1: 123456", $output);
+		$this->assertStringContainsString("This code is valid for", $output);
 		$this->assertEquals(0, $ec);
 	}
 
@@ -116,9 +116,9 @@ class GenerateTest extends TestCase {
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertContains("There is an existing code that will be overwritten.", $output);
-		$this->assertContains("Generated new one-time code for user1: 123456", $output);
-		$this->assertContains("This code is valid for", $output);
+		$this->assertStringContainsString("There is an existing code that will be overwritten.", $output);
+		$this->assertStringContainsString("Generated new one-time code for user1: 123456", $output);
+		$this->assertStringContainsString("This code is valid for", $output);
 		$this->assertEquals(0, $ec);
 	}
 
