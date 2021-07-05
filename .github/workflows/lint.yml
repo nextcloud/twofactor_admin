@@ -1,0 +1,36 @@
+name: Lint
+on:
+  push:
+    branches:
+      - master
+      - stable*
+  pull_request:
+
+jobs:
+  lint-php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.3', '7.4', '8.0']
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up php${{ matrix.php-versions }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          coverage: none
+      - name: Lint PHP
+        run: find . -name \*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+  lint-appinfo-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download schema
+        run: wget https://apps.nextcloud.com/schema/apps/info.xsd
+      - name: Lint info.xml
+        uses: ChristophWurst/xmllint-action@v1
+        with:
+          xml-file: ./appinfo/info.xml
+          xml-schema-file: ./info.xsd
