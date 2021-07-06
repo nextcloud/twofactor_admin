@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c081896f94c616bf21e8797d6ff4ac88",
+    "content-hash": "ed38b0bf82027a7fdc9f43f507e8a9e8",
     "packages": [],
     "packages-dev": [
         {
             "name": "christophwurst/nextcloud",
-            "version": "v20.0.0",
+            "version": "v20.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristophWurst/nextcloud_composer.git",
-                "reference": "898b3b7feda1d8a761dffeaeda6fccace44eb649"
+                "reference": "114c6598743dc4caa21c84eafadedf3f6730cdab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/898b3b7feda1d8a761dffeaeda6fccace44eb649",
-                "reference": "898b3b7feda1d8a761dffeaeda6fccace44eb649",
+                "url": "https://api.github.com/repos/ChristophWurst/nextcloud_composer/zipball/114c6598743dc4caa21c84eafadedf3f6730cdab",
+                "reference": "114c6598743dc4caa21c84eafadedf3f6730cdab",
                 "shasum": ""
             },
             "require": {
@@ -43,9 +43,9 @@
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
             "support": {
                 "issues": "https://github.com/ChristophWurst/nextcloud_composer/issues",
-                "source": "https://github.com/ChristophWurst/nextcloud_composer/tree/v20.0.0"
+                "source": "https://github.com/ChristophWurst/nextcloud_composer/tree/v20.0.7"
             },
-            "time": "2020-10-05T12:40:45+00:00"
+            "time": "2021-02-03T07:58:35+00:00"
         },
         {
             "name": "christophwurst/nextcloud_testing",
