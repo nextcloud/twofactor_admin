@@ -19,8 +19,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import Axios from 'nextcloud-axios'
-import {generateUrl} from 'nextcloud-router'
+import axios from '@nextcloud/axios'
+import {generateUrl} from '@nextcloud/router'
 
 /**
  * @param {String} uid
@@ -29,6 +29,6 @@ import {generateUrl} from 'nextcloud-router'
 export const generateCode = uid => {
 	const url = generateUrl('/apps/twofactor_admin/api/admin/code')
 
-	return Axios.post(url, {uid})
+	return axios.post(url, {uid})
 		.then(resp => resp.data)
 }

@@ -29,10 +29,10 @@
   },
   "homepage": "https://github.com/ChristophWurst/twofactor_admin#readme",
   "dependencies": {
-    "nextcloud-axios": "^0.2.1",
-    "nextcloud-l10n": "0.1.1",
-    "nextcloud-router": "0.0.9",
-    "vue": "^2.6.11"
+    "@nextcloud/axios": "^1.6.0",
+    "@nextcloud/l10n": "^1.4.1",
+    "@nextcloud/router": "^2.0.0",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
