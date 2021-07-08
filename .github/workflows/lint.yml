@@ -22,6 +22,39 @@ jobs:
           coverage: none
       - name: Lint PHP
         run: find . -name \*.php -not -path './vendor/*' -print0 | xargs -0 -n1 php -l
+
+  lint-js:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Set up npm7
+        run: npm i -g npm@7
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+
+  lint-js-stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Set up npm7
+        run: npm i -g npm@7
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run stylelint
+
   lint-appinfo-xml:
     runs-on: ubuntu-latest
     steps:

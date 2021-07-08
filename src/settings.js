@@ -1,7 +1,7 @@
 /*
- * @copyright 2018 Christoph Wurst <christoph@winzerhof-wurst.at>
+ * @copyright 2019 Christoph Wurst <christoph@winzerhof-wurst.at>
  *
- * @author 2018 Christoph Wurst <christoph@winzerhof-wurst.at>
+ * @author 2019 Christoph Wurst <christoph@winzerhof-wurst.at>
  *
  * @license GNU AGPL version 3 or any later version
  *
@@ -19,15 +19,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-const merge = require('webpack-merge');
-const nodeExternals = require('webpack-node-externals')
-const path = require('path');
+import Vue from 'vue'
 
-const common = require('./webpack.common.js');
+import AdminSettings from './components/AdminSettings'
+import Nextcloud from './mixins/Nextcloud'
 
-module.exports = merge(common, {
-	mode: 'development',
-	context: path.resolve(__dirname, 'src'),
-	devtool: 'inline-cheap-module-source-map',
-	externals: [nodeExternals()]
-})
+Vue.mixin(Nextcloud)
+
+const View = Vue.extend(AdminSettings)
+new View().$mount('#two-factor-admin-admin-settings')
