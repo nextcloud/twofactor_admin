@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 – 2021-07-08
+### Added
+- Nextcloud 21+22 support
+- PHP 8.0 support
+### Changed
+- Moved CI testing to Github actions
+### Fixed
+- Updated NPM dependencies (some with vulnerabilites)
+- Migrated to NPM 7 + NodeJS 14
+- Removed unused PHP imports
+
 ## 3.0.0 – 2020-08-24
 ### Added
 - Nextcloud 20 support
