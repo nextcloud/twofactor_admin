@@ -24,7 +24,7 @@ declare(strict_types=1);
  */
 
 
-script(\OCA\TwoFactorAdmin\AppInfo\Application::APP_ID, 'settings');
+script('twofactor_admin', 'twofactor-admin-settings');
 
 ?>
 

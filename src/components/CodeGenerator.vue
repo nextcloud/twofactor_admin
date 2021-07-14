@@ -27,13 +27,13 @@
 			</label>
 			<br>
 			<input id="two-factor-admin-uid"
-				   type="text"
-				   v-model="uid"
-				   :disabled="loading"
-				   required>
+				v-model="uid"
+				type="text"
+				:disabled="loading"
+				required>
 			<input type="submit"
-				   :disabled="loading"
-				   :value="t('twofactor_admin', 'Generate')">
+				:disabled="loading"
+				:value="t('twofactor_admin', 'Generate')">
 		</form>
 		<div v-if="error">
 			{{ t('twofactor_admin', 'Could not generate a code: {error}', {error}) }}
@@ -45,49 +45,44 @@
 </template>
 
 <script>
-	import {translate as t} from 'nextcloud-l10n'
+import { translate as t } from '@nextcloud/l10n'
+import { generateCode } from '../service/AdminCodeService'
 
-	import {generateCode} from '../service/AdminCodeService'
-
-	export default {
-		name: 'CodeGenerator',
-		data () {
-			return {
-				uid: '',
-				loading: false,
-				error: '',
-				code: undefined,
-				validFor: undefined,
-			}
-		},
-		methods: {
-			submit () {
-				this.code = undefined
-				this.validUntil = undefined
-				this.loading = true
-				this.error = undefined
-
-				return generateCode(this.uid)
-					.then(data => {
-						this.code = data.code
-						this.validFor = data.validFor
-					})
-					.catch(e => {
-						if (e.response && e.response.status === 404) {
-							this.error = t('twofactor_admin', 'user {uid} does not exist', {uid: this.uid})
-						} else if (e.response && e.response.status === 403) {
-							this.error = t('twofactor_admin', 'you are not allowed to generate codes for this user')
-						} else {
-							this.error = t('twofactor_admin', 'unknown error', {uid: this.uid})
-						}
-					})
-					.catch(console.error.bind(this))
-					.then(() => this.loading = false)
-			}
+export default {
+	name: 'CodeGenerator',
+	data() {
+		return {
+			uid: '',
+			loading: false,
+			error: '',
+			code: undefined,
+			validFor: undefined,
 		}
-	}
+	},
+	methods: {
+		submit() {
+			this.code = undefined
+			this.validUntil = undefined
+			this.loading = true
+			this.error = undefined
+
+			return generateCode(this.uid)
+				.then(data => {
+					this.code = data.code
+					this.validFor = data.validFor
+				})
+				.catch(e => {
+					if (e.response && e.response.status === 404) {
+						this.error = t('twofactor_admin', 'user {uid} does not exist', { uid: this.uid })
+					} else if (e.response && e.response.status === 403) {
+						this.error = t('twofactor_admin', 'you are not allowed to generate codes for this user')
+					} else {
+						this.error = t('twofactor_admin', 'unknown error', { uid: this.uid })
+					}
+				})
+				.catch(console.error.bind(this))
+				.then(() => { this.loading = false })
+		},
+	},
+}
 </script>
-
-<style scoped>
-
-</style>

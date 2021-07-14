@@ -28,22 +28,18 @@
 
 		<h3>{{ t('twofactor_admin', 'Generate a code') }}</h3>
 		<p>
-			<CodeGenerator/>
+			<CodeGenerator />
 		</p>
 	</div>
 </template>
 
 <script>
-	import CodeGenerator from './CodeGenerator'
+import CodeGenerator from './CodeGenerator'
 
-	export default {
-		name: 'AdminSettings',
-		components: {
-			CodeGenerator,
-		},
-	}
+export default {
+	name: 'AdminSettings',
+	components: {
+		CodeGenerator,
+	},
+}
 </script>
-
-<style scoped>
-
-</style>
