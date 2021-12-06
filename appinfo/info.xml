@@ -9,7 +9,7 @@
 		users have lost access to their other 2FA methods or mandatory 2FA without any previously
 		enabled 2FA provider.
 	</description>
-	<version>3.1.0</version>
+	<version>3.2.0</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<namespace>TwoFactorAdmin</namespace>
@@ -23,7 +23,7 @@
 		<php min-version="7.2" max-version="8.0"/>
 		<database>sqlite</database>
 		<database>mysql</database>
-		<nextcloud min-version="17" max-version="22"/>
+		<nextcloud min-version="17" max-version="23"/>
 	</dependencies>
 
 	<two-factor-providers>
