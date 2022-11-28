@@ -2,7 +2,7 @@
 style('twofactor_admin', 'challenge');
 ?>
 
-<img class="two-factor-icon" src="<?php print_unescaped(image_path('server', 'actions/more-white.svg')); ?>" alt="">
+<img class="two-factor-icon" src="<?php print_unescaped(image_path('core', 'actions/more-white.svg')); ?>" alt="">
 
 <form method="POST"
 	  id="admin-2fa-form">
