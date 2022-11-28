@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
+        php-versions: ['7.4', '8.0', '8.1']
         databases: ['sqlite']
-        nextcloud-versions: ['stable20', 'stable21', 'stable22']
+        nextcloud-versions: ['stable23', 'stable24', 'stable25', 'master']
     name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
     steps:
       - name: Checkout server
@@ -60,13 +60,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
+        php-versions: ['7.4', '8.0', '8.1']
         databases: ['mysql']
-        nextcloud-versions: ['stable20', 'stable21', 'stable22']
+        nextcloud-versions: ['stable23', 'stable24', 'stable25']
     name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
     services:
       mysql:
-        image: mariadb:10.5
+        image: mariadb:10.6
         ports:
           - 4444:3306/tcp
         env:

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.3', '7.4', '8.0']
+        php-versions: [7.4', '8.0']
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -31,9 +31,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: 14
-      - name: Set up npm7
-        run: npm i -g npm@7
+          node-version: 16
       - name: Install dependencies
         run: npm ci
       - name: Lint
@@ -47,9 +45,7 @@ jobs:
       - name: Set up node
         uses: actions/setup-node@v2
         with:
-          node-version: 14
-      - name: Set up npm7
-        run: npm i -g npm@7
+          node-version: 16
       - name: Install dependencies
         run: npm ci
       - name: Lint
