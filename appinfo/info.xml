@@ -12,6 +12,7 @@
 	<version>3.2.0</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
+	<author homepage="https://github.com/nextcloud/wg-two-factor-authentication">Nextcloud Two-Factor Authentication Working Group</author>
 	<namespace>TwoFactorAdmin</namespace>
 	<documentation>
 		<user>https://nextcloud-twofactor-admin.readthedocs.io/en/latest/User%20Documentation/</user>

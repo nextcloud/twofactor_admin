@@ -12,5 +12,10 @@ enabled 2FA provider.
 
 For more details, see the [admin documentation] and [user documentation].
 
+## Maintainers
+
+* [ChristophWurst](https://github.com/ChristophWurst)
+* [Nextcloud Two-Factor Authentication Working Group](https://github.com/nextcloud/wg-two-factor-authentication#members)
+
 [admin documentation]: https://nextcloud-twofactor-admin.readthedocs.io/en/latest/Admin%20Documentation/
 [user documentation]: https://nextcloud-twofactor-admin.readthedocs.io/en/latest/User%20Documentation/
