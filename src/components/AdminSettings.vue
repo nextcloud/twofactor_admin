@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import CodeGenerator from './CodeGenerator'
+import CodeGenerator from './CodeGenerator.vue'
 
 export default {
 	name: 'AdminSettings',
