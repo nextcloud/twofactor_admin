@@ -14,9 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.4', '8.0', '8.1']
+        php-versions: ['8.1']
         databases: ['sqlite']
-        nextcloud-versions: ['stable23', 'stable24', 'stable25', 'master']
+        nextcloud-versions: ['master']
+        include:
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable23'
+            databases: 'sqlite'
+          - php-versions: '8.0'
+            nextcloud-versions: 'stable24'
+            databases: 'sqlite'
+          - php-versions: '8.1'
+            nextcloud-versions: 'stable25'
+            databases: 'sqlite'
     name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
     steps:
       - name: Checkout server
@@ -60,9 +70,19 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-versions: ['7.4', '8.0', '8.1']
+        php-versions: ['8.1']
         databases: ['mysql']
-        nextcloud-versions: ['stable23', 'stable24', 'stable25']
+        nextcloud-versions: ['master']
+        include:
+          - php-versions: '7.4'
+            nextcloud-versions: 'stable23'
+            databases: 'mysql'
+          - php-versions: '8.0'
+            nextcloud-versions: 'stable24'
+            databases: 'mysql'
+          - php-versions: '8.0'
+            nextcloud-versions: 'stable25'
+            databases: 'mysql'
     name: php${{ matrix.php-versions }}-${{ matrix.databases }} on ${{ matrix.nextcloud-versions }}
     services:
       mysql:
