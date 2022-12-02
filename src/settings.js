@@ -21,8 +21,8 @@
 
 import Vue from 'vue'
 
-import AdminSettings from './components/AdminSettings'
-import Nextcloud from './mixins/Nextcloud'
+import AdminSettings from './components/AdminSettings.vue'
+import Nextcloud from './mixins/Nextcloud.js'
 
 Vue.mixin(Nextcloud)
 

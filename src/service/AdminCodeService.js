@@ -23,8 +23,8 @@ import axios from '@nextcloud/axios'
 import { generateUrl } from '@nextcloud/router'
 
 /**
- * @param {String} uid UserID
- * @returns {Promise}
+ * @param {string} uid UserID
+ * @return {Promise}
  */
 export const generateCode = uid => {
 	const url = generateUrl('/apps/twofactor_admin/api/admin/code')
