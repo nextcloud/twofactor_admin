@@ -1,6 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 – 2022-12-02
+### Added
+- Nextcloud 23-25 support
+- PHP8.1 support
+### Changed
+- Dependency updates
+### Removed
+- Nextcloud 21-22 support
+
 ## 3.1.0 – 2021-07-08
 ### Added
 - Nextcloud 21+22 support
