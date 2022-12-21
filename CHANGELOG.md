@@ -1,3 +1,12 @@
+## [4.1.1](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.0...v4.1.1) (2022-12-21)
+
+
+### Bug Fixes
+
+* Release automation tarball upload ([18273a0](https://github.com/ChristophWurst/twofactor_admin/commit/18273a031dc3b8ac84d0427175e939e3a9b0b8d9))
+
+
+
 # [4.1.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.0.0...v4.1.0) (2022-12-21)
 
 
