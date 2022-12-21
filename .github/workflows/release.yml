@@ -71,7 +71,7 @@ jobs:
         id: attach_to_release
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: twofactor_admin/build/artifacts/twofactor_admin.tar.gz
+          file: build/artifacts/twofactor_admin.tar.gz
           asset_name: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
           tag: ${{ steps.changelog.outputs.tag }}
           overwrite: true
