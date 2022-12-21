@@ -73,7 +73,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: twofactor_admin/build/artifacts/twofactor_admin.tar.gz
           asset_name: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
-          tag: ${{ steps.changelog.outputs }}
+          tag: ${{ steps.changelog.outputs.tag }}
           overwrite: true
       - name: Upload app to Nextcloud appstore
         uses: nextcloud-releases/nextcloud-appstore-push-action@v1
