@@ -1,3 +1,12 @@
+## [4.1.2](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.1...v4.1.2) (2022-12-21)
+
+
+### Bug Fixes
+
+* Release tarball path ([13a630e](https://github.com/ChristophWurst/twofactor_admin/commit/13a630ef435d1eb56922a64b75939f03dcafb9b5))
+
+
+
 ## [4.1.1](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.0...v4.1.1) (2022-12-21)
 
 
