@@ -1,3 +1,12 @@
+## [4.1.9](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.8...v4.1.9) (2022-12-22)
+
+
+### Bug Fixes
+
+* Release asset path ([e91621e](https://github.com/ChristophWurst/twofactor_admin/commit/e91621e489e596f8f3367c7433a63a52d631ee06))
+
+
+
 ## [4.1.8](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.7...v4.1.8) (2022-12-22)
 
 
