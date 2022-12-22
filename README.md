@@ -19,3 +19,12 @@ For more details, see the [admin documentation] and [user documentation].
 
 [admin documentation]: https://nextcloud-twofactor-admin.readthedocs.io/en/latest/Admin%20Documentation/
 [user documentation]: https://nextcloud-twofactor-admin.readthedocs.io/en/latest/User%20Documentation/
+
+## How to release
+
+1) Go to https://github.com/nextcloud/twofactor_admin/actions/workflows/release.yml
+2) Click *Run workflow*
+   1) Leave *Branch: main*
+   2) Click *Run workflow*
+3) Go to https://github.com/nextcloud/twofactor_admin/actions
+4) Click on the pending *Release* workflow and approve it (only maintainers can do this)
