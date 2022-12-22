@@ -1,3 +1,14 @@
+## [4.1.3](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.2...v4.1.3) (2022-12-22)
+
+
+### Bug Fixes
+
+* Release asset json access ([67bd51c](https://github.com/ChristophWurst/twofactor_admin/commit/67bd51ca08bf6419fc8e7586e6614d41fd460f05))
+* Release asset json access ([16f625d](https://github.com/ChristophWurst/twofactor_admin/commit/16f625d56448a234d803e79745a382b00cac46b0))
+* Release to releases orga automatically ([24c06c8](https://github.com/ChristophWurst/twofactor_admin/commit/24c06c8c132977fbb5b8880e6e27e59a5e8003bc))
+
+
+
 ## [4.1.2](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.1...v4.1.2) (2022-12-21)
 
 
