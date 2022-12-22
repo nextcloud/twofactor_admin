@@ -1,3 +1,12 @@
+## [4.1.8](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.7...v4.1.8) (2022-12-22)
+
+
+### Bug Fixes
+
+* PAT issues ([0ced3db](https://github.com/ChristophWurst/twofactor_admin/commit/0ced3db5eb213f93566e07304f612c08a1d11fd3))
+
+
+
 ## [4.1.7](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.6...v4.1.7) (2022-12-22)
 
 
