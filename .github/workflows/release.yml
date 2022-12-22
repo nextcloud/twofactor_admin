@@ -58,8 +58,10 @@ jobs:
           files: build/artifacts/twofactor_admin.tar.gz
           repository: nextcloud-releases/twofactor_admin
       - name: Print assets infos
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: echo ${{ steps.github-release.outputs.assets }}
       - name: Upload app to Nextcloud appstore
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: nextcloud-releases/nextcloud-appstore-push-action@v1
         with:
           app_name: ${{ env.twofactor_admin }}
