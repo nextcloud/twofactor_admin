@@ -1,3 +1,12 @@
+## [4.1.4](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.3...v4.1.4) (2022-12-22)
+
+
+### Bug Fixes
+
+* Unmatched quote in release automation ([f705e33](https://github.com/ChristophWurst/twofactor_admin/commit/f705e330bfedc670bbba54535f9bf4f8a3c3a238))
+
+
+
 ## [4.1.3](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.2...v4.1.3) (2022-12-22)
 
 
