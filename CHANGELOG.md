@@ -1,3 +1,12 @@
+## [4.1.5](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.4...v4.1.5) (2022-12-22)
+
+
+### Bug Fixes
+
+* Missing krankerl tool for release automation ([c299c94](https://github.com/ChristophWurst/twofactor_admin/commit/c299c94a621745d7e0ef4c0082a542a2fccbdf90))
+
+
+
 ## [4.1.4](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.3...v4.1.4) (2022-12-22)
 
 
