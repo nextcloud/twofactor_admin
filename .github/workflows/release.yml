@@ -36,6 +36,7 @@ jobs:
           php-version: 'false'
           node-version: 'false'
           npm-version: ${{ steps.versions.outputs.npmVersion }}
+          tools: 'krankerl'
       - name: Package app
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: krankerl package
