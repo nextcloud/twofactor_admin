@@ -38,28 +38,13 @@ jobs:
         with:
           fallbackNode: '^16'
           fallbackNpm: '^8'
-      - name: Set up node ${{ steps.versions.outputs.nodeVersion }}
-        uses: actions/setup-node@v2
+      - name: Set up Nextcloud env
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        uses: ChristophWurst/setup-nextcloud@v0.3.1
         with:
-          node-version: ${{ steps.versions.outputs.nodeVersion }}
-      - name: Set up npm ${{ steps.versions.outputs.npmVersion }}
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: npm i -g npm@"${{ steps.versions.outputs.npmVersion }}"
-      - name: Install Krankerl
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: |
-          wget https://github.com/ChristophWurst/krankerl/releases/download/v0.13.0/krankerl_0.13.0_amd64.deb
-          sudo dpkg -i krankerl_0.13.0_amd64.deb
-      - name: Set up php
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.0
-          extensions: ctype,curl,dom,gd,iconv,intl,json,mbstring,openssl,posix,sqlite,xml,zip
-          coverage: none
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          php-version: 'false'
+          node-version: 'false'
+          npm-version: ${{ steps.versions.outputs.npmVersion }}"
       - name: Package app
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: krankerl package
