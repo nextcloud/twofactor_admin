@@ -57,7 +57,7 @@ jobs:
           body: ${{ steps.changelog.outputs.clean_changelog }}
           files: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
           repository: nextcloud-releases/twofactor_admin
-      - name: Print assets info
+      - name: Print assets infos
         run: echo ${{ steps.github-release.outputs.assets }}
       - name: Upload app to Nextcloud appstore
         uses: nextcloud-releases/nextcloud-appstore-push-action@v1
