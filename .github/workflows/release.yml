@@ -42,7 +42,9 @@ jobs:
         run: krankerl package
       - name: Push tag to releases organization
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        run: git push release ${{ steps.changelog.outputs.tag }}
+        run: |
+          get remote add release https://github.com/nextcloud-releases/twofactor_admin.git
+          git push release ${{ steps.changelog.outputs.tag }}
       - name: Create Release in releases organization
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         id: github-release
