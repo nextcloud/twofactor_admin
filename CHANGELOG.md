@@ -1,3 +1,12 @@
+## [4.1.7](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.6...v4.1.7) (2022-12-22)
+
+
+### Bug Fixes
+
+* Typo in release script ([5dcdf0e](https://github.com/ChristophWurst/twofactor_admin/commit/5dcdf0e41943353b09a2f3128c6064d3c245a245))
+
+
+
 ## [4.1.6](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.5...v4.1.6) (2022-12-22)
 
 
