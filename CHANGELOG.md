@@ -1,3 +1,12 @@
+## [4.1.6](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.5...v4.1.6) (2022-12-22)
+
+
+### Bug Fixes
+
+* Missing git remote for the release organization ([e330b29](https://github.com/ChristophWurst/twofactor_admin/commit/e330b299aadf23b45740753c9a88a21d473a651a))
+
+
+
 ## [4.1.5](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.4...v4.1.5) (2022-12-22)
 
 
