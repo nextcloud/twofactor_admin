@@ -55,7 +55,7 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
-          files: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
+          files: build/artifacts/twofactor_admin.tar.gz
           repository: nextcloud-releases/twofactor_admin
       - name: Print assets infos
         run: echo ${{ steps.github-release.outputs.assets }}
