@@ -22,15 +22,6 @@ jobs:
           pre-commit: build/pre-commit.js
           release-count: 0
           version-file: "package.json, package-lock.json"
-      - name: Create Release
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
       - name: Read package.json node and npm engines version
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: skjnldsv/read-package-engines-version-actions@v1.1
@@ -48,19 +39,27 @@ jobs:
       - name: Package app
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: krankerl package
-      - name: Attach tarball to github release
-        uses: svenstaro/upload-release-action@v2
-        id: attach_to_release
+      - name: Push tag to releases organization
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        run: git push release ${{ steps.changelog.outputs.tag }}
+      - name: Create Release in releases organization
+        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        id: github-release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/artifacts/twofactor_admin.tar.gz
-          asset_name: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
-          tag: ${{ steps.changelog.outputs.tag }}
-          overwrite: true
+          tag_name: ${{ steps.changelog.outputs.tag }}
+          release_name: ${{ steps.changelog.outputs.tag }}
+          body: ${{ steps.changelog.outputs.clean_changelog }}
+          files: twofactor_admin-${{ steps.changelog.outputs.tag }}.tar.gz
+          repository: nextcloud-releases/twofactor_admin
+      - name: Print assets info
+        run: echo ${{ steps.github-release.outputs.assets }}
       - name: Upload app to Nextcloud appstore
         uses: nextcloud-releases/nextcloud-appstore-push-action@v1
         with:
           app_name: ${{ env.twofactor_admin }}
           appstore_token: ${{ secrets.APPSTORE_TOKEN }}
-          download_url: ${{ steps.attach_to_release.outputs.browser_download_url }}
+          download_url: ${{ fromJson(steps.github-release.outputs.assets).0.browser_download_url }}
           app_private_key: ${{ secrets.APP_PRIVATE_KEY }}
