@@ -24,7 +24,7 @@
   "homepage": "https://github.com/ChristophWurst/twofactor_admin#readme",
   "dependencies": {
     "@nextcloud/axios": "^2.3.0",
-    "@nextcloud/l10n": "^1.6.0",
+    "@nextcloud/l10n": "^2.1.0",
     "@nextcloud/router": "^2.0.1",
     "vue": "^2.7.14"
   },
