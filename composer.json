@@ -15,10 +15,11 @@
         }
     },
     "scripts": {
+        "lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l",
         "test": "phpunit -c tests/phpunit.xml",
-        "test:acceptance": "phpunit -c tests/phpunit.xml tests/Acceptance",
+        "test:integration": "phpunit -c tests/phpunit.xml tests/Integration",
         "test:unit": "phpunit -c tests/phpunit.xml tests/Unit",
-        "test:acceptance:dev": "phpunit -c tests/phpunit.xml tests/Acceptance --no-coverage",
+        "test:integration:dev": "phpunit -c tests/phpunit.xml tests/Integration --no-coverage",
         "test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage"
     },
     "require-dev": {
