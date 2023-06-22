@@ -1,0 +1,10 @@
+{
+	"config": {
+		"platform": {
+			"php": "7.4"
+		}
+	},
+    "require": {
+        "christophwurst/nextcloud_testing": "^0.12.4"
+    }
+}

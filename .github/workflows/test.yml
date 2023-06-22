@@ -26,6 +26,7 @@ jobs:
         with:
           nextcloud-version: ${{ matrix.nextcloud-versions }}
           php-version: ${{ matrix.php-versions }}
+          install: true
       - name: Checkout app
         uses: actions/checkout@v2
         with:
@@ -33,6 +34,8 @@ jobs:
       - name: Install PHP dependencies
         working-directory: nextcloud/apps/${{ env.APP_NAME }}
         run: composer i
+      - name: Install app
+        run: php -f nextcloud/occ app:enable ${{ env.APP_NAME }}
       - name: PHPUnit
         working-directory: nextcloud/apps/${{ env.APP_NAME }}
         run: composer run test
@@ -90,13 +93,12 @@ jobs:
         env:
           DB_PORT: 4444
         run: |
-          mkdir data
           ./occ maintenance:install --verbose --database=${{ matrix.databases }} --database-name=nextcloud --database-host=127.0.0.1 --database-port=$DB_PORT --database-user=root --database-pass=rootpassword --admin-user admin --admin-pass password
           php -f index.php
-          ./occ app:enable --force ${{ env.APP_NAME }}
+          ./occ app:enable ${{ env.APP_NAME }}
       - name: PHPUnit
         working-directory: apps/${{ env.APP_NAME }}
-        run: phpunit -c tests/phpunit.xml
+        run: composer run test
 
   frontend-build-test:
     runs-on: ubuntu-latest
