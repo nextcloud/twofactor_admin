@@ -13,12 +13,6 @@ jobs:
         databases: ['sqlite']
         nextcloud-versions: ['stable27']
         include:
-          - php-versions: '7.4'
-            nextcloud-versions: 'stable23'
-            databases: 'sqlite'
-          - php-versions: '8.0'
-            nextcloud-versions: 'stable24'
-            databases: 'sqlite'
           - php-versions: '8.1'
             nextcloud-versions: 'stable25'
             databases: 'sqlite'
@@ -51,12 +45,6 @@ jobs:
         databases: ['mysql']
         nextcloud-versions: ['stable27']
         include:
-          - php-versions: '7.4'
-            nextcloud-versions: 'stable23'
-            databases: 'mysql'
-          - php-versions: '8.0'
-            nextcloud-versions: 'stable24'
-            databases: 'mysql'
           - php-versions: '8.0'
             nextcloud-versions: 'stable25'
             databases: 'mysql'
