@@ -9,7 +9,7 @@
 		users have lost access to their other 2FA methods or mandatory 2FA without any previously
 		enabled 2FA provider.
 	</description>
-	<version>4.1.9</version>
+	<version>4.2.0</version>
 	<licence>agpl</licence>
 	<author>Christoph Wurst</author>
 	<author homepage="https://github.com/nextcloud/wg-two-factor-authentication">Nextcloud Two-Factor Authentication Working Group</author>

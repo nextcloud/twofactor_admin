@@ -1,3 +1,17 @@
+# [4.2.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.9...v4.2.0) (2023-06-23)
+
+
+### Bug Fixes
+
+* **deps:** Update xmllint action ([56ffad1](https://github.com/ChristophWurst/twofactor_admin/commit/56ffad17397374e6ab8ad0a6a636f995ebff6b9f))
+
+
+### Features
+
+* **deps:** Add Nextcloud 28 support ([8e6e73f](https://github.com/ChristophWurst/twofactor_admin/commit/8e6e73f7e2f0f1e28eb14decaa0c2d125845743a))
+
+
+
 ## [4.1.9](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.8...v4.1.9) (2022-12-22)
 
 
