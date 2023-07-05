@@ -12,6 +12,9 @@
     "config": {
         "platform": {
             "php": "7.2"
+        },
+        "allow-plugins": {
+            "bamarni/composer-bin-plugin": true
         }
     },
     "scripts": {
@@ -19,10 +22,15 @@
         "test:acceptance": "phpunit -c tests/phpunit.xml tests/Acceptance",
         "test:unit": "phpunit -c tests/phpunit.xml tests/Unit",
         "test:acceptance:dev": "phpunit -c tests/phpunit.xml tests/Acceptance --no-coverage",
-        "test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage"
-    },
+        "test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage",
+		"post-install-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi"
+		]
+	},
     "require-dev": {
-        "christophwurst/nextcloud_testing": "^0.12.4",
-        "christophwurst/nextcloud": "20.0.7"
+        "bamarni/composer-bin-plugin": "^1.5"
     }
 }

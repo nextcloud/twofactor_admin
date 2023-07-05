@@ -2,9 +2,11 @@
 
 composer.phar
 /vendor/
+/vendor-bin/*/vendor
 /node_modules
 
 /js
 
 /tests/clover.xml
+/tests/.phpunit.result.cache
 
