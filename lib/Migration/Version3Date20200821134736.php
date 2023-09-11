@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace OCA\TwoFactorAdmin\Migration;
 
 use Closure;
-use OCP\AppFramework\Utility\ITimeFactory;
 use OCP\DB\ISchemaWrapper;
 use OCP\DB\QueryBuilder\IQueryBuilder;
 use OCP\IDBConnection;

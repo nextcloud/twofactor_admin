@@ -36,7 +36,7 @@ use OCP\Security\ISecureRandom;
 
 class CodeStorage {
 
-	const CODE_TTL = 3600 * 48;
+	public const CODE_TTL = 3600 * 48;
 
 	/** @var CodeMapper */
 	private $codeMapper;
@@ -51,9 +51,9 @@ class CodeStorage {
 	private $timeFactory;
 
 	public function __construct(CodeMapper $codeMapper,
-								ISecureRandom $random,
-								IEventDispatcher $eventDispatcher,
-								ITimeFactory $timeFactory) {
+		ISecureRandom $random,
+		IEventDispatcher $eventDispatcher,
+		ITimeFactory $timeFactory) {
 		$this->codeMapper = $codeMapper;
 		$this->random = $random;
 		$this->eventDispatcher = $eventDispatcher;

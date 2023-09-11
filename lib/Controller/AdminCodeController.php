@@ -54,11 +54,11 @@ class AdminCodeController extends Controller {
 	private $userSession;
 
 	public function __construct(IRequest $request,
-								IUserManager $userManager,
-								IGroupManager $groupManager,
-								ISubAdmin $subAdmin,
-								CodeStorage $codeStorage,
-								IUserSession $userSession) {
+		IUserManager $userManager,
+		IGroupManager $groupManager,
+		ISubAdmin $subAdmin,
+		CodeStorage $codeStorage,
+		IUserSession $userSession) {
 		parent::__construct(Application::APP_ID, $request);
 		$this->codeStorage = $codeStorage;
 		$this->userManager = $userManager;
@@ -99,4 +99,3 @@ class AdminCodeController extends Controller {
 	}
 
 }
-

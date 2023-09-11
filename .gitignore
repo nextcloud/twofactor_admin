@@ -1,6 +1,7 @@
 /build/artifacts
 
 composer.phar
+.php-cs-fixer.cache
 /vendor/
 /vendor-bin/*/vendor
 /node_modules
