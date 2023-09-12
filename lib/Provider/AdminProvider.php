@@ -47,9 +47,9 @@ class AdminProvider implements IProvider, IProvidesIcons {
 	private $codeStorage;
 
 	public function __construct(string $appName,
-								IL10N $l10n,
-								IURLGenerator $urlGenerator,
-								CodeStorage $codeStorage) {
+		IL10N $l10n,
+		IURLGenerator $urlGenerator,
+		CodeStorage $codeStorage) {
 		$this->appName = $appName;
 		$this->l10n = $l10n;
 		$this->urlGenerator = $urlGenerator;

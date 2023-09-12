@@ -11,17 +11,19 @@
     ],
     "config": {
         "platform": {
-            "php": "7.2"
+            "php": "8.0"
         },
         "allow-plugins": {
             "bamarni/composer-bin-plugin": true
         }
     },
     "scripts": {
-        "test": "phpunit -c tests/phpunit.xml",
-        "test:acceptance": "phpunit -c tests/phpunit.xml tests/Acceptance",
+        "cs:check": "php-cs-fixer fix --dry-run --diff",
+        "cs:fix": "php-cs-fixer fix",
+	"test": "phpunit -c tests/phpunit.xml",
+        "test:integration": "phpunit -c tests/phpunit.xml tests/Integration",
         "test:unit": "phpunit -c tests/phpunit.xml tests/Unit",
-        "test:acceptance:dev": "phpunit -c tests/phpunit.xml tests/Acceptance --no-coverage",
+        "test:integration:dev": "phpunit -c tests/phpunit.xml tests/Integration --no-coverage",
         "test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage",
 		"post-install-cmd": [
 			"@composer bin all install --ansi"
@@ -31,6 +33,6 @@
 		]
 	},
     "require-dev": {
-        "bamarni/composer-bin-plugin": "^1.5"
+        "bamarni/composer-bin-plugin": "^1.8.2"
     }
 }

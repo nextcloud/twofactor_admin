@@ -26,8 +26,8 @@ namespace OCA\TwoFactorAdmin\Migration;
 
 use Closure;
 use OCP\DB\ISchemaWrapper;
-use OCP\Migration\SimpleMigrationStep;
 use OCP\Migration\IOutput;
+use OCP\Migration\SimpleMigrationStep;
 
 class Version2Date20180926055748 extends SimpleMigrationStep {
 
