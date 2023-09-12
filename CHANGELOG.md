@@ -1,3 +1,17 @@
+# [4.3.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.2.0...v4.3.0) (2023-09-12)
+
+
+### Features
+
+* **deps:** Upgrade max supported PHP versions to PHP 8.2 ([07cb7ce](https://github.com/ChristophWurst/twofactor_admin/commit/07cb7cec1709bed30290dd829f5ea185173c9077))
+
+
+### Reverts
+
+* Revert "chore(release): v4.3.0 [skip ci]" ([94bf8fe](https://github.com/ChristophWurst/twofactor_admin/commit/94bf8fee5882aa5756c9617f2993128e00c50657))
+
+
+
 # [4.2.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.1.9...v4.2.0) (2023-06-23)
 
 
