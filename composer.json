@@ -32,7 +32,7 @@
 			"@composer bin all update --ansi"
 		]
 	},
-    "require-dev": {
+    "require": {
         "bamarni/composer-bin-plugin": "^1.8.2"
     }
 }
