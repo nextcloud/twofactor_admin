@@ -14,6 +14,7 @@ For more details, see the [admin documentation] and [user documentation].
 
 ## Maintainers
 
+* [Altahrim](https://github.com/Altahrim)
 * [ChristophWurst](https://github.com/ChristophWurst)
 * [Nextcloud Two-Factor Authentication Working Group](https://github.com/nextcloud/wg-two-factor-authentication#members)
 
