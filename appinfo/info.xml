@@ -11,6 +11,7 @@
 	</description>
 	<version>4.3.0</version>
 	<licence>agpl</licence>
+	<author>Benjamin Gaussorgues</author>
 	<author>Christoph Wurst</author>
 	<author homepage="https://github.com/nextcloud/wg-two-factor-authentication">Nextcloud Two-Factor Authentication Working Group</author>
 	<namespace>TwoFactorAdmin</namespace>
