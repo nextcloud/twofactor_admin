@@ -1,0 +1,6 @@
+{ "translations": {
+    "unknown error" : "onbekende fout",
+    "Authentication code" : "Authenticatie code",
+    "Submit" : "Verwerken"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

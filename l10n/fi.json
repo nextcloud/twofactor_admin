@@ -1,0 +1,6 @@
+{ "translations": {
+    "unknown error" : "tuntematon virhe",
+    "Authentication code" : "Tunnistautumiskoodi",
+    "Submit" : "Lähetä"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

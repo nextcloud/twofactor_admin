@@ -1,0 +1,6 @@
+{ "translations": {
+    "User ID" : "Felhasználóazonosító",
+    "Authentication code" : "Hitelesítőkód",
+    "Submit" : "Beküldés"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

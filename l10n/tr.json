@@ -1,0 +1,7 @@
+{ "translations": {
+    "User ID" : "Kullanıcı kodu",
+    "unknown error" : "hata bilinmiyor",
+    "Authentication code" : "Doğrulama kodu",
+    "Submit" : "Gönder"
+},"pluralForm" :"nplurals=2; plural=(n > 1);"
+}

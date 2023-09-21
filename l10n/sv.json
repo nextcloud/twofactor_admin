@@ -1,0 +1,6 @@
+{ "translations": {
+    "User ID" : "Användar-ID",
+    "Authentication code" : "Autentiseringskod",
+    "Submit" : "Skicka"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

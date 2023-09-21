@@ -1,0 +1,7 @@
+{ "translations": {
+    "User ID" : "使用者 ID",
+    "unknown error" : "未知錯誤",
+    "Authentication code" : "驗證碼",
+    "Submit" : "遞交"
+},"pluralForm" :"nplurals=1; plural=0;"
+}
