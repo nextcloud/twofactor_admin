@@ -1,0 +1,6 @@
+{ "translations": {
+    "unknown error" : "άγνωστο σφάλμα",
+    "Authentication code" : "Κωδικός πιστοποίησης",
+    "Submit" : "Υποβολή"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

@@ -1,0 +1,22 @@
+{ "translations": {
+    "Admin code" : "رمز المُشرِف",
+    "Use a one-time code provided by your admin" : "إستعِمل رمز المرة الواحدة الممنوح لك من مشرفك",
+    "Two-Factor Admin Support" : "دعم المُشرِف للتحقُّق المُثنّى من الهُوِيّة",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "مُزوّد دعم المشرف للتحقُّق المُثنّى من الهُوِيّة في نكست كلاود",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "يسمح مُزوّد التحقُّق  المُثنّى من الهُويّة في نكست كلاود (2FA) لـ Nextcloud للمشرفين بإنشاء رموز تستعمل لمرة واحدة \t\t لتسجيل دخول المستخدم إلى حسابه المحمي مع التحقُّق المثنى من هُويَّتِه  2FA. و هذا مفيد في المواقف التي \t\tيكون المستخدم قد فقد فيها إمكانية الوصول إلى طرق التحقُّق الأخرى أو في حالة فرض التحقق المثنى الإلزامي بدون  \t\tتمكين مزود للتحقق المثنى 2FA.",
+    "Two-Factor Admin" : "مُشرف التحقُّق المُثنّى من الهُويّة",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "يسمح مُزوّد التحقُّق المُثنّى من الهُويّة في نكست كلاود  لك بإنشاء رموز لمرة واحدة لمستخدميك. و هذا مفيد في المواقف التي يكون المستخدم قد فقد فيها إمكانية الوصول إلى طرق التحقُّق الأخرى أو في حالة فرض التحقق المثنى الإلزامي بدون تمكين مزود للتحقق المثنى.",
+    "Generate a code" : "قم بتوليد كود",
+    "User ID" : "رمز المستخدم",
+    "Generate" : "توليد",
+    "Could not generate a code: {error}" : "تعذّر توليد كود: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "الكود المٌولَّد هو {code}. وهو صالح لـ {hours} ساعات",
+    "user {uid} does not exist" : "المستخدِم {uid} غير موجود",
+    "you are not allowed to generate codes for this user" : "غير مسموح لك بتوليد كود لهذا المستخدِم",
+    "unknown error" : "خطأٌ غير محدّدٍ",
+    "Enter the one-time code provided by your admin." : "أدخِل كود المرة الواحدة الممنوح لك من مشرفك.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "بمجرد دخولك، يُرجى التحقُّق من إعدادات التحقُّق المُثنّى لديك حتى يمكنك الدخول في المرة القادمة.",
+    "Authentication code" : "رمز المصادقة",
+    "Submit" : "إرسال "
+},"pluralForm" :"nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;"
+}

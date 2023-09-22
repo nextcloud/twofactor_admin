@@ -1,0 +1,24 @@
+OC.L10N.register(
+    "twofactor_admin",
+    {
+    "Admin code" : "Admin-Code",
+    "Use a one-time code provided by your admin" : "Einen einmaligen Code verwenden, der von Ihrer Administration bereitgestellt wird",
+    "Two-Factor Admin Support" : "Zwei-Faktor-Administrationsunterstützung",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Nextcloud Zwei-Faktor-Authentifizierung Administrationsunterstützung Anbieter",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Dieser Zwei-Faktor-Authentifizierungsanbieter (2FA) für Nextcloud ermöglicht es der Administration, einen einmaligen\n\t\tCode zu generieren, mit dem sich Benutzer bei einem 2FA-geschützten Konto anmelden können. Dies ist hilfreich in Situationen, in denen\n\t\tBenutzer den Zugang zu ihren anderen 2FA-Methoden verloren haben oder eine 2FA ohne einen zuvor\n\t\taktivierten 2FA-Anbieter.",
+    "Two-Factor Admin" : "Zwei-Faktor-Administration",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "Mit dem Zwei-Faktor-Administrationsanbieter können Sie Einmalcodes für Ihre Benutzer generieren. Dies ist hilfreich für die erste Anmeldung, nachdem die Zwei-Faktor-Authentifizierung aktiviert wurde, oder wenn die Benutzer den Zugriff auf ihre anderen Faktoren verlieren.",
+    "Generate a code" : "Einen Code erzeugen",
+    "User ID" : "Benutzer-ID",
+    "Generate" : "Erzeugen",
+    "Could not generate a code: {error}" : "Es konnte kein Code generiert werden: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "Der erzeugte Code lautet {code}. Er ist gültig für {hours} Stunden.",
+    "user {uid} does not exist" : "Benutzer {uid} existiert nicht",
+    "you are not allowed to generate codes for this user" : "Sie sind nicht berechtigt, Codes für diesen Benutzer zu erstellen",
+    "unknown error" : "Unbekannter Fehler",
+    "Enter the one-time code provided by your admin." : "Geben Sie den einmaligen Code ein, den Sie von Ihrer Administration erhalten haben.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Wenn Sie angemeldet sind, überprüfen Sie bitte Ihre Zwei-Faktor-Einstellungen, um sich erneut anmelden zu können.",
+    "Authentication code" : "Authentifizierungscode",
+    "Submit" : "Übermitteln"
+},
+"nplurals=2; plural=(n != 1);");

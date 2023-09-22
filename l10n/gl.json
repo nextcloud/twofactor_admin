@@ -1,0 +1,7 @@
+{ "translations": {
+    "User ID" : "Identificador do usuario",
+    "unknown error" : "produciuse un erro descoñecido",
+    "Authentication code" : "Código de autenticación",
+    "Submit" : "Enviar"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

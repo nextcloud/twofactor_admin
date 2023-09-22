@@ -1,0 +1,7 @@
+{ "translations": {
+    "User ID" : "ID de l'usuari",
+    "unknown error" : "error desconegut",
+    "Authentication code" : "Codi d'autenticació",
+    "Submit" : "Envia"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}

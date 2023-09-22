@@ -1,0 +1,7 @@
+{ "translations": {
+    "User ID" : "Bruger ID",
+    "unknown error" : "ukendt fejl",
+    "Authentication code" : "Godkendelses kode",
+    "Submit" : "Tilføj"
+},"pluralForm" :"nplurals=2; plural=(n != 1);"
+}
