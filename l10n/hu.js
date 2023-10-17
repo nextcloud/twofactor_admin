@@ -2,6 +2,7 @@ OC.L10N.register(
     "twofactor_admin",
     {
     "User ID" : "Felhasználóazonosító",
+    "Generate" : "Generálás",
     "Authentication code" : "Hitelesítőkód",
     "Submit" : "Beküldés"
 },
