@@ -14,6 +14,7 @@ OC.L10N.register(
     "you are not allowed to generate codes for this user" : "nincs jogosultsága kódok létrehozásához ehhez a felhasználóhoz",
     "unknown error" : "ismeretlen hiba",
     "Enter the one-time code provided by your admin." : "Adja meg a rendszergada által biztosított egyszer használatos kódot",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Amint bejelentkezett, ellenőrizze a kétfaktoros hitelesítési beállításait, hogy újra be tudjon jelentkezni.",
     "Authentication code" : "Hitelesítőkód",
     "Submit" : "Beküldés"
 },
