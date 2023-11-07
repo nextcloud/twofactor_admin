@@ -1,5 +1,6 @@
 { "translations": {
     "Admin code" : "Code administrateur",
+    "Use a one-time code provided by your admin" : "Utiliser un code à usage unique fourni par votre administrateur",
     "Two-Factor Admin Support" : "Support de Two-Factor Admin",
     "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Ce fournisseur d'authentification à deux facteurs (2FA) pour Nextcloud permet aux administrateurs de générer des codes\n\t\tà usage unique pour que les utilisateurs ayant un compte protégé par une 2FA puissent se connecter. Ceci est utile dans des situations où\n\t\tles utilisateurs ont perdu l'accès à leurs autres méthodes double facteurs sans avoir préalablement activé un fournisseur 2FA.",
     "Two-Factor Admin" : "Two-Factor Admin",
