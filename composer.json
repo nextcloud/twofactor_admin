@@ -1,30 +1,31 @@
 {
-    "name": "nextcloud/twofactor_admin",
-    "description": "Nextcloud Two-Factor Authentication Admin Provider",
-    "type": "library",
-    "license": "AGPL-v3",
-    "authors": [
-        {
-            "name": "Christoph Wurst",
-            "email": "christoph@winzerhof-wurst.at"
-        }
-    ],
-    "config": {
-        "platform": {
-            "php": "8.0"
-        },
-        "allow-plugins": {
-            "bamarni/composer-bin-plugin": true
-        }
-    },
-    "scripts": {
-        "cs:check": "php-cs-fixer fix --dry-run --diff",
-        "cs:fix": "php-cs-fixer fix",
-	"test": "phpunit -c tests/phpunit.xml",
-        "test:integration": "phpunit -c tests/phpunit.xml tests/Integration",
-        "test:unit": "phpunit -c tests/phpunit.xml tests/Unit",
-        "test:integration:dev": "phpunit -c tests/phpunit.xml tests/Integration --no-coverage",
-        "test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage",
+	"name": "nextcloud/twofactor_admin",
+	"description": "Nextcloud Two-Factor Authentication Admin Provider",
+	"type": "library",
+	"license": "AGPL-v3",
+	"authors": [
+		{
+			"name": "Christoph Wurst",
+			"email": "christoph@winzerhof-wurst.at"
+		}
+	],
+	"config": {
+		"platform": {
+			"php": "8.0"
+		},
+		"allow-plugins": {
+			"bamarni/composer-bin-plugin": true
+		}
+	},
+	"scripts": {
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"lint": "find . -name \\*.php -not -path './vendor*/*' -print0 | xargs -0 -n1 -P $(nproc) php -l",
+		"test": "phpunit -c tests/phpunit.xml",
+		"test:integration": "phpunit -c tests/phpunit.xml tests/Integration",
+		"test:unit": "phpunit -c tests/phpunit.xml tests/Unit",
+		"test:integration:dev": "phpunit -c tests/phpunit.xml tests/Integration --no-coverage",
+		"test:unit:dev": "phpunit -c tests/phpunit.xml tests/Unit --no-coverage",
 		"post-install-cmd": [
 			"@composer bin all install --ansi"
 		],
@@ -32,7 +33,7 @@
 			"@composer bin all update --ansi"
 		]
 	},
-    "require": {
-        "bamarni/composer-bin-plugin": "^1.8.2"
-    }
+	"require": {
+		"bamarni/composer-bin-plugin": "^1.8.2"
+	}
 }
