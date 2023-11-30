@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
 	<id>twofactor_admin</id>
 	<name>Two-Factor Admin Support</name>
 	<summary>Nextcloud Two-Factor Authentication Admin Support Provider</summary>
@@ -25,6 +24,7 @@
 		<php min-version="8.0" max-version="8.2"/>
 		<database>sqlite</database>
 		<database>mysql</database>
+		<database>pgsql</database>
 		<nextcloud min-version="26" max-version="28"/>
 	</dependencies>
 
