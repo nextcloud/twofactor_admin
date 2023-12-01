@@ -1,3 +1,15 @@
+# [4.4.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.3.0...v4.4.0) (2023-12-01)
+
+
+### Features
+
+* Bump supported Nextcloud versions (min: 26 / max: 28) ([8b495af](https://github.com/ChristophWurst/twofactor_admin/commit/8b495afbb7d6b8bc83d1e130f51f130c24fb33a5))
+* **deps:** Bump minimal PHP version to PHP 8.0 ([7d3bb9d](https://github.com/ChristophWurst/twofactor_admin/commit/7d3bb9d15c8b2b498256d2d251a0f9869d6fb8a7))
+* **deps:** Reenable PostgreSQL ([5545d87](https://github.com/ChristophWurst/twofactor_admin/commit/5545d87c7a9c055e534f8eb917e4bf09a7fb4923))
+* **l10n:** Prepare transifex integration ([ea379ae](https://github.com/ChristophWurst/twofactor_admin/commit/ea379ae58a306a9105afa00bc67d0683178d529c))
+
+
+
 # [4.3.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.2.0...v4.3.0) (2023-09-12)
 
 
