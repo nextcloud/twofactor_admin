@@ -9,7 +9,7 @@ OC.L10N.register(
     "Two-Factor Admin" : "İki adımlı doğrulama yöneticisi",
     "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "İki adımlı doğrulama yönetici hizmeti sağlayıcı, kullanıcılarınız için tek kullanımlık kodlar üretmenizi sağlar. Bu kodlar, iki adımlı doğrulama etkinleştirildikten sonraki ilk oturum açma işleminde veya kullanıcılar diğer doğrulama adımlarına erişimi kaybettiğinde işe yarar.",
     "Generate a code" : "Bir kod oluşturun",
-    "User ID" : "Kullanıcı kodu",
+    "User ID" : "Kullanıcı kimliği",
     "Generate" : "Oluştur",
     "Could not generate a code: {error}" : "Kod oluşturulamadı: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "{code} kodu oluşturuldu ve {hours} saat süreyle geçerli olacak",
