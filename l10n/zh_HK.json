@@ -13,7 +13,7 @@
     "The generated code is {code}. It is valid for {hours} hours" : "產生的驗證碼是 {code}。有效時間為{hours}小時",
     "user {uid} does not exist" : "用戶 {uid} 不存在",
     "you are not allowed to generate codes for this user" : "您不能為此用戶產生驗證碼",
-    "unknown error" : "未知錯誤",
+    "unknown error" : "錯誤不詳",
     "Enter the one-time code provided by your admin." : "輸入您管理員提供的一次性驗證碼",
     "Once logged in, please check your two-factor settings in order to be able to log in again." : "一旦登入，請檢查您的雙重認證設定，以便能夠再次登入。",
     "Authentication code" : "驗證碼",
