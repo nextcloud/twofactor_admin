@@ -42,5 +42,5 @@
     "@nextcloud/stylelint-config": "^2.4.0",
     "@nextcloud/webpack-vue-config": "^6.0.1"
   },
-  "version": "4.4.0"
+  "version": "4.5.0"
 }

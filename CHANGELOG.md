@@ -1,3 +1,13 @@
+# [4.5.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.4.0...v4.5.0) (2024-03-21)
+
+
+### Features
+
+* allow to use PHP 8.3 ([2fa12ff](https://github.com/ChristophWurst/twofactor_admin/commit/2fa12ff10aa7810529f263865c4983c3a427738a)), closes [#319](https://github.com/ChristophWurst/twofactor_admin/issues/319)
+* **deps:** add support for Nextcloud 29 ([162ce94](https://github.com/ChristophWurst/twofactor_admin/commit/162ce9482813cb9d808a038d0c2ead02d8a57ddf))
+
+
+
 # [4.4.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.3.0...v4.4.0) (2023-12-01)
 
 
