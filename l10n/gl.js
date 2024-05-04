@@ -9,7 +9,7 @@ OC.L10N.register(
     "Two-Factor Admin" : "Administración de dous factores",
     "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "O fornecedor de administración de dous factores permítelle xerar códigos únicos para os seus usuarios. Isto é útil para o primeiro acceso após activar a autenticación de dous factores ou cando os usuarios perden o acceso aos seus outros factores.",
     "Generate a code" : "Xerar un código",
-    "User ID" : "Identificador do usuario",
+    "User ID" : "ID do usuario",
     "Generate" : "Xerar",
     "Could not generate a code: {error}" : "Non foi posíbel xerar un código: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "O código xerado é {code}. É válido durante {hours} horas",
