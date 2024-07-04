@@ -8,7 +8,7 @@
 		users have lost access to their other 2FA methods or mandatory 2FA without any previously
 		enabled 2FA provider.
 	</description>
-	<version>4.5.0</version>
+	<version>4.6.0</version>
 	<licence>agpl</licence>
 	<author>Benjamin Gaussorgues</author>
 	<author>Christoph Wurst</author>

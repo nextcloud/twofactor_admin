@@ -1,3 +1,12 @@
+# [4.6.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.5.0...v4.6.0) (2024-07-04)
+
+
+### Features
+
+* **deps:** Drop Nextcloud 27/26 support ([69683be](https://github.com/ChristophWurst/twofactor_admin/commit/69683be68b40eed1573264585fee97d8acea1ce8))
+
+
+
 # [4.5.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.4.0...v4.5.0) (2024-03-21)
 
 
