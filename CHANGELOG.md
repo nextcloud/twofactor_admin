@@ -1,3 +1,12 @@
+# [4.7.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.6.0...v4.7.0) (2024-08-07)
+
+
+### Features
+
+* **deps:** add support for Nextcloud 30 ([fb34ab6](https://github.com/ChristophWurst/twofactor_admin/commit/fb34ab642b8f5a30d306a0feb40f507ba66d383e))
+
+
+
 # [4.6.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.5.0...v4.6.0) (2024-07-04)
 
 
