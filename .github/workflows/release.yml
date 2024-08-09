@@ -6,7 +6,7 @@ jobs:
     permissions:
       contents: write
     environment: release
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest, self-hosted]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
