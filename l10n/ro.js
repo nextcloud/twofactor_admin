@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "User ID" : "ID-ul utilizatorului",
     "Authentication code" : "Cod autentificare",
     "Submit" : "Trimite"
 },
