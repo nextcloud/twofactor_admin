@@ -14,7 +14,7 @@ OC.L10N.register(
     "Could not generate a code: {error}" : "Не вдалося зґенерувати код: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "Ваш одноразовий код входу {code}. Він буде дійсний протягом {hours} годин.",
     "user {uid} does not exist" : "користувач {uid} не існує",
-    "you are not allowed to generate codes for this user" : "у вас відсутні права на ґенерування кодів для цього користувача",
+    "you are not allowed to generate codes for this user" : "у вас відсутні права на генерування кодів для цього користувача",
     "unknown error" : "невідома помилка",
     "Enter the one-time code provided by your admin." : "Зазначте одноразовий код, який було надано адміністратором.",
     "Once logged in, please check your two-factor settings in order to be able to log in again." : "Одразу після авторизації перевірте ваші власні налаштування двофакторної авторизації, щоби наступного разу ви мали можливість успішної авторизації.",
