@@ -1,3 +1,12 @@
+## [4.7.1](https://github.com/ChristophWurst/twofactor_admin/compare/v4.7.0...v4.7.1) (2024-10-25)
+
+
+### Bug Fixes
+
+* Update readme ([29fe512](https://github.com/ChristophWurst/twofactor_admin/commit/29fe512c89cd6fc2e2294937a1930192298897fb))
+
+
+
 # [4.7.0](https://github.com/ChristophWurst/twofactor_admin/compare/v4.6.0...v4.7.0) (2024-08-07)
 
 
