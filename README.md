@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Nextcloud Two-Factor Authentication Admin Support Provider
 
 [![Build status](https://github.com/ChristophWurst/twofactor_admin/actions/workflows/test.yml/badge.svg)](https://github.com/ChristophWurst/twofactor_admin/actions/workflows/test.yml)

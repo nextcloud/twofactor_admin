@@ -5,7 +5,7 @@
   "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristophWurst/twofactor_admin.git"
+    "url": "git+https://github.com/nextcloud/twofactor_admin.git"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack --progress --config webpack.js",
@@ -19,9 +19,9 @@
     "nextcloud"
   ],
   "bugs": {
-    "url": "https://github.com/ChristophWurst/twofactor_admin/issues"
+    "url": "https://github.com/nextcloud/twofactor_admin/issues"
   },
-  "homepage": "https://github.com/ChristophWurst/twofactor_admin#readme",
+  "homepage": "https://github.com/nextcloud/twofactor_admin#readme",
   "dependencies": {
     "@nextcloud/axios": "^2.5.0",
     "@nextcloud/l10n": "^3.1.0",
