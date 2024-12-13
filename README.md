@@ -4,6 +4,7 @@
 -->
 # Nextcloud Two-Factor Authentication Admin Support Provider
 
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/twofactor_admin)](https://api.reuse.software/info/github.com/nextcloud/twofactor_admin)
 [![Build status](https://github.com/ChristophWurst/twofactor_admin/actions/workflows/test.yml/badge.svg)](https://github.com/ChristophWurst/twofactor_admin/actions/workflows/test.yml)
 [![Read the Docs](https://img.shields.io/readthedocs/nextcloud-twofactor-admin.svg)](https://nextcloud-twofactor-admin.readthedocs.io/en/latest/)
 
