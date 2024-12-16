@@ -1,3 +1,7 @@
+<!--
+  - SPDX-FileCopyrightText: 2018 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 ## [4.7.1](https://github.com/ChristophWurst/twofactor_admin/compare/v4.7.0...v4.7.1) (2024-10-25)
 
 
