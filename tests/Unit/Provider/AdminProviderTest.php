@@ -115,6 +115,15 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 		$this->assertTrue($enabled);
 	}
 
+	public function testDisableForUser() {
+		$user = $this->createMock(IUser::class);
+		$this->codeStorage->expects($this->once())
+			->method('removeCodesForUser')
+			->with($user);
+
+		$this->provider->disableFor($user);
+	}
+
 	public function testGetDarkIcon() {
 		$this->urlGenerator->expects($this->once())
 			->method('imagePath')

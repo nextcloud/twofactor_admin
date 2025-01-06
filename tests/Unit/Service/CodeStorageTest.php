@@ -12,6 +12,7 @@ namespace OCA\TwoFactorAdmin\Test\Unit\Service;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\TwoFactorAdmin\Db\Code;
 use OCA\TwoFactorAdmin\Db\CodeMapper;
+use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\AppFramework\Db\DoesNotExistException;
 use OCP\AppFramework\Db\MultipleObjectsReturnedException;
@@ -151,6 +152,18 @@ class CodeStorageTest extends TestCase {
 		$valid = $this->codeStorage->validateCode($user, "123456");
 
 		$this->assertTrue($valid);
+	}
+
+	public function testRemoveCodesForUser() {
+		$user = $this->createMock(IUser::class);
+		$this->codeMapper->expects($this->once())
+			->method("deleteAll")
+			->with($user);
+		$this->eventDispatcher->expects($this->once())
+			->method('dispatch')
+			->with(StateChanged::class, new StateChanged($user, false));
+
+		$this->codeStorage->removeCodesForUser($user);
 	}
 
 }
