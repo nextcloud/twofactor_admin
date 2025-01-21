@@ -10,6 +10,7 @@ declare(strict_types=1);
 namespace OCA\TwoFactorAdmin\Provider;
 
 use OCA\TwoFactorAdmin\Service\CodeStorage;
+use OCP\Authentication\TwoFactorAuth\IDeactivatableByAdmin;
 use OCP\Authentication\TwoFactorAuth\IProvider;
 use OCP\Authentication\TwoFactorAuth\IProvidesIcons;
 use OCP\IL10N;
@@ -17,28 +18,12 @@ use OCP\IURLGenerator;
 use OCP\IUser;
 use OCP\Template;
 
-class AdminProvider implements IProvider, IProvidesIcons {
+class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin {
 
-	/** @var string */
-	private $appName;
-
-	/** @var IL10N */
-	private $l10n;
-
-	/** @var IURLGenerator */
-	private $urlGenerator;
-
-	/** @var CodeStorage */
-	private $codeStorage;
-
-	public function __construct(string $appName,
-		IL10N $l10n,
-		IURLGenerator $urlGenerator,
-		CodeStorage $codeStorage) {
-		$this->appName = $appName;
-		$this->l10n = $l10n;
-		$this->urlGenerator = $urlGenerator;
-		$this->codeStorage = $codeStorage;
+	public function __construct(private string $appName,
+		private IL10N $l10n,
+		private IURLGenerator $urlGenerator,
+		private CodeStorage $codeStorage) {
 	}
 
 	/**
@@ -100,6 +85,15 @@ class AdminProvider implements IProvider, IProvidesIcons {
 	 */
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return $this->codeStorage->hasCode($user);
+	}
+
+	/**
+	 * Disable this provider for the given user.
+	 *
+	 * @param IUser $user the user to deactivate this provider for
+	 */
+	public function disableFor(IUser $user): void {
+		$this->codeStorage->removeCodesForUser($user);
 	}
 
 	public function getLightIcon(): String {

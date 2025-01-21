@@ -87,4 +87,9 @@ class CodeStorage {
 		}
 	}
 
+	public function removeCodesForUser(IUser $user): void {
+		$this->codeMapper->deleteAll($user);
+		$this->eventDispatcher->dispatch(StateChanged::class, new StateChanged($user, false));
+	}
+
 }
