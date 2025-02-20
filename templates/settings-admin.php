@@ -8,7 +8,7 @@ declare(strict_types=1);
  */
 
 
-script('twofactor_admin', 'twofactor-admin-settings');
+\OCP\Util::addScript('twofactor_admin', 'twofactor-admin-settings', 'core');
 
 ?>
 

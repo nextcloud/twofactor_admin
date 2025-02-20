@@ -28,8 +28,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 
 	/**
 	 * Get unique identifier of this 2FA provider
-	 *
-	 * @return string
 	 */
 	public function getId(): string {
 		return 'admin';
@@ -37,8 +35,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 
 	/**
 	 * Get the display name for selecting the 2FA provider
-	 *
-	 * @return string
 	 */
 	public function getDisplayName(): string {
 		return $this->l10n->t('Admin code');
@@ -46,8 +42,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 
 	/**
 	 * Get the description for selecting the 2FA provider
-	 *
-	 * @return string
 	 */
 	public function getDescription(): string {
 		return $this->l10n->t('Use a one-time code provided by your admin');
@@ -68,9 +62,7 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 	 * Verify the given challenge
 	 *
 	 * @param IUser $user
-	 * @param string $challenge
 	 *
-	 * @return bool
 	 */
 	public function verifyChallenge(IUser $user, string $challenge): bool {
 		return $this->codeStorage->validateCode($user, $challenge);
@@ -80,8 +72,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 	 * Decides whether 2FA is enabled for the given user
 	 *
 	 * @param IUser $user
-	 *
-	 * @return boolean
 	 */
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return $this->codeStorage->hasCode($user);

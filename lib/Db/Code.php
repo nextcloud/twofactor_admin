@@ -22,7 +22,9 @@ use OCP\AppFramework\Db\Entity;
 class Code extends Entity {
 
 	protected $userId;
+
 	protected $code;
+
 	protected $expires;
 
 }

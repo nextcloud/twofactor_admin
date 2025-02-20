@@ -19,7 +19,6 @@ class Version2Date20180926055748 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
-	 * @param array $options
 	 *
 	 * @return ISchemaWrapper
 	 */
@@ -42,6 +41,7 @@ class Version2Date20180926055748 extends SimpleMigrationStep {
 		$expiresCol = $codesTable->getColumn('expires');
 		$expiresCol->setNotnull(true);
 		$expiresCol->setDefault(0);
+
 		$idCol = $codesTable->getColumn('id');
 		$idCol->setAutoincrement(true);
 	}

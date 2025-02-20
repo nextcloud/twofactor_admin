@@ -25,9 +25,6 @@ class AdminCodeController extends Controller {
 	/** @var IUserManager */
 	private $userManager;
 
-	/** @var CodeStorage */
-	private $codeStorage;
-
 	/** @var IGroupManager */
 	private $groupManager;
 
@@ -41,10 +38,9 @@ class AdminCodeController extends Controller {
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		ISubAdmin $subAdmin,
-		CodeStorage $codeStorage,
+		private CodeStorage $codeStorage,
 		IUserSession $userSession) {
 		parent::__construct(Application::APP_ID, $request);
-		$this->codeStorage = $codeStorage;
 		$this->userManager = $userManager;
 		$this->groupManager = $groupManager;
 		$this->subAdmin = $subAdmin;
@@ -52,10 +48,8 @@ class AdminCodeController extends Controller {
 	}
 
 	/**
-	 * @param string $uid
 	 *
 	 * @SubAdminRequired
-	 *
 	 * @return JSONResponse
 	 */
 	public function create(string $uid): JSONResponse {
@@ -66,6 +60,7 @@ class AdminCodeController extends Controller {
 			// This is pretty much impossible
 			return new JSONResponse(null, Http::STATUS_BAD_REQUEST);
 		}
+
 		if ($user === null) {
 			return new JSONResponse(null, Http::STATUS_NOT_FOUND);
 		}

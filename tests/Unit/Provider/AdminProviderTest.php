@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace OCA\TwoFactorAdmin\Test\Unit\Provider;
 
+use ChristophWurst\Nextcloud\Testing\TestCase;
 use OCA\TwoFactorAdmin\Provider\AdminProvider;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
 use OCP\IL10N;
@@ -17,7 +18,7 @@ use OCP\IUser;
 use OCP\Template;
 use PHPUnit\Framework\MockObject\MockObject;
 
-class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
+class AdminProviderTest extends TestCase {
 
 	/** @var IL10N|MockObject */
 	private $l10n;
@@ -32,8 +33,6 @@ class AdminProviderTest extends \ChristophWurst\Nextcloud\Testing\TestCase {
 	private $provider;
 
 	protected function setUp(): void {
-		parent::setUp();
-
 		$this->l10n = $this->createMock(IL10N::class);
 		$this->urlGenerator = $this->createMock(IURLGenerator::class);
 		$this->codeStorage = $this->createMock(CodeStorage::class);

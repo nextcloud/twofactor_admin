@@ -23,9 +23,6 @@ class CodeStorage {
 
 	public const CODE_TTL = 3600 * 48;
 
-	/** @var CodeMapper */
-	private $codeMapper;
-
 	/** @var ISecureRandom */
 	private $random;
 
@@ -35,11 +32,10 @@ class CodeStorage {
 	/** @var ITimeFactory */
 	private $timeFactory;
 
-	public function __construct(CodeMapper $codeMapper,
+	public function __construct(private CodeMapper $codeMapper,
 		ISecureRandom $random,
 		IEventDispatcher $eventDispatcher,
 		ITimeFactory $timeFactory) {
-		$this->codeMapper = $codeMapper;
 		$this->random = $random;
 		$this->eventDispatcher = $eventDispatcher;
 		$this->timeFactory = $timeFactory;
@@ -52,6 +48,7 @@ class CodeStorage {
 		$dbCode->setUserId($user->getUID());
 		$dbCode->setCode($code);
 		$dbCode->setExpires($this->timeFactory->getTime() + self::CODE_TTL);
+
 		$this->codeMapper->deleteAll($user);
 		$this->codeMapper->insert($dbCode);
 
@@ -67,10 +64,10 @@ class CodeStorage {
 	public function validateCode(IUser $user, string $code): bool {
 		try {
 			$dbCode = $this->codeMapper->find($user);
-		} catch (DoesNotExistException $ex) {
+		} catch (DoesNotExistException) {
 			// TODO: log?
 			return false;
-		} catch (MultipleObjectsReturnedException $ex) {
+		} catch (MultipleObjectsReturnedException) {
 			// Actually impossible with the primary key constraints, but still
 			return false;
 		}
@@ -82,9 +79,9 @@ class CodeStorage {
 			$this->eventDispatcher->dispatch(StateChanged::class, new StateChanged($user, false));
 
 			return $dbCode->getExpires() >= $this->timeFactory->getTime();
-		} else {
-			return false;
 		}
+
+		return false;
 	}
 
 	public function removeCodesForUser(IUser $user): void {
