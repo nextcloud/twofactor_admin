@@ -18,15 +18,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class Generate extends Command {
 
-	/** @var CodeStorage */
-	private $codeStorage;
-
 	/** @var IUserManager */
 	private $userManager;
 
-	public function __construct(CodeStorage $codeStorage, IUserManager $userManager) {
+	public function __construct(private CodeStorage $codeStorage, IUserManager $userManager) {
 		parent::__construct();
-		$this->codeStorage = $codeStorage;
 		$this->userManager = $userManager;
 	}
 
@@ -53,9 +49,9 @@ class Generate extends Command {
 		}
 
 		$code = $this->codeStorage->generateCode($user);
-		$output->writeln("Generated new one-time code for <options=bold>$userId</>: <info>$code</info>");
+		$output->writeln(sprintf('Generated new one-time code for <options=bold>%s</>: <info>%s</info>', $userId, $code));
 		$ttlInHours = CodeStorage::CODE_TTL / 3600;
-		$output->writeln("This code is valid for $ttlInHours hours.");
+		$output->writeln(sprintf('This code is valid for %d hours.', $ttlInHours));
 
 		return 0;
 	}

@@ -28,7 +28,6 @@ class Version3Date20200821134736 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
-	 * @param array $options
 	 *
 	 * @return null|ISchemaWrapper
 	 */
@@ -64,7 +63,6 @@ class Version3Date20200821134736 extends SimpleMigrationStep {
 	/**
 	 * @param IOutput $output
 	 * @param Closure $schemaClosure The `\Closure` returns a `ISchemaWrapper`
-	 * @param array $options
 	 */
 	public function postSchemaChange(IOutput $output, Closure $schemaClosure, array $options) {
 		/** @var ISchemaWrapper $schema */
@@ -97,6 +95,7 @@ class Version3Date20200821134736 extends SimpleMigrationStep {
 
 			$insert->execute();
 		}
+
 		$result->closeCursor();
 	}
 }

@@ -15,6 +15,7 @@ use ChristophWurst\Nextcloud\Testing\TestUser;
 use OC;
 use OCA\TwoFactorAdmin\Db\Code;
 use OCA\TwoFactorAdmin\Db\CodeMapper;
+use OCP\AppFramework\Db\DoesNotExistException;
 
 class CodeMapperTest extends TestCase {
 
@@ -44,6 +45,7 @@ class CodeMapperTest extends TestCase {
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
 		$code->setExpires(time());
+
 		$this->mapper->insert($code);
 
 		$exists = $this->mapper->entryExists($user);
@@ -57,6 +59,7 @@ class CodeMapperTest extends TestCase {
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
 		$code->setExpires(time());
+
 		$this->mapper->insert($code);
 
 		$exists = $this->mapper->entryExists($user);
@@ -65,7 +68,7 @@ class CodeMapperTest extends TestCase {
 	}
 
 	public function testFindNotFound() {
-		$this->expectException(\OCP\AppFramework\Db\DoesNotExistException::class);
+		$this->expectException(DoesNotExistException::class);
 		$user = $this->createTestUser();
 
 		$this->mapper->find($user);
@@ -77,6 +80,7 @@ class CodeMapperTest extends TestCase {
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
 		$code->setExpires(time());
+
 		$this->mapper->insert($code);
 
 		$result = $this->mapper->find($user);
@@ -90,6 +94,7 @@ class CodeMapperTest extends TestCase {
 		$code->setUserId($user->getUID());
 		$code->setCode('123456');
 		$code->setExpires(time());
+
 		$this->mapper->insert($code);
 
 		$this->mapper->deleteAll($user);

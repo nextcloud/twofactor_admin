@@ -54,7 +54,6 @@ class Version2Date20180926053333 extends SimpleMigrationStep {
 
 	/**
 	 * @param IQueryBuilder $qb
-	 * @param int $expires
 	 */
 	private function fillExpireDates(IQueryBuilder $qb, int $expires) {
 		$updateQuery = $qb->update('twofactor_admin_codes')

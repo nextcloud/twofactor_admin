@@ -17,14 +17,10 @@ class StateChanged extends Event {
 	/** @var IUser */
 	private $user;
 
-	/** @var bool */
-	private $enabled;
-
-	public function __construct(IUser $user, bool $enabled) {
+	public function __construct(IUser $user, private bool $enabled) {
 		parent::__construct();
 
 		$this->user = $user;
-		$this->enabled = $enabled;
 	}
 
 	/**
@@ -34,9 +30,6 @@ class StateChanged extends Event {
 		return $this->user;
 	}
 
-	/**
-	 * @return bool
-	 */
 	public function isEnabled(): bool {
 		return $this->enabled;
 	}
