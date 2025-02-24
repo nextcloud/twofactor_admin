@@ -1,8 +1,23 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "Admin code" : "Kód administrácie",
+    "Use a one-time code provided by your admin" : "Použite jednorazový kód, ktorý vám poskytne váš administrátor",
+    "Two-Factor Admin Support" : " Podpora Administrácia 2-faktorového overenia",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Poskytovateľ administračnej podpory dvojfaktorovej autentizácie Nextcloud",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Tento poskytovateľ dvojfaktorového overenia (2FA) pre Nextcloud umožňuje administrátorom vygenerovať jednorazový\nkód pre užívateľov pre prihlásenie do účtu chráneného 2FA. To je užitočné v situáciách, kedy\nužívatelia stratili prístup k svojim ďalším metódam 2FA alebo povinným 2FA bez toho, aby predtým\npovolený poskytovateľ 2FA.",
+    "Two-Factor Admin" : " Administrácia 2-faktorového overenia",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "Poskytovateľ administrácie dvojfaktorového prihlasovania vám umožňuje generovať jednorazové kódy pre vašich užívateľov. Je to užitočné pri prvom prihlásení a po aktivácii dvojfaktorovej autentifikácie alebo keď užívatelia stratia prístup k svojim ďalším faktorom.",
+    "Generate a code" : "Vygenerovať kód",
     "User ID" : "ID užívateľa",
+    "Generate" : "Vygenerovať",
+    "Could not generate a code: {error}" : "Nepodarilo sa vygenerovať kód: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "Vygenerovaný kód je {code}. Je platný po dobu {hours} hodín ",
+    "user {uid} does not exist" : "užívateľ {uid} neexistuje",
+    "you are not allowed to generate codes for this user" : "nemáte povolené generovať kódy pre tohto používateľa",
     "unknown error" : "neznáma chyba",
+    "Enter the one-time code provided by your admin." : "Vložte jednorazový kód, ktorý vám poskytol váš administrátor",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Po prihlásení skontrolujte svoje dvojfaktorové nastavenia, aby ste sa mohli znova prihlásiť.",
     "Authentication code" : "Overovací kód",
     "Submit" : "Odoslať"
 },
