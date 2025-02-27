@@ -1,10 +1,10 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "User ID" : "ID Uporabnika",
     "user {uid} does not exist" : "uporabnik {uid} ne obstaja",
     "you are not allowed to generate codes for this user" : "nimate dovoljenja za ustvarnjanje kod za tega uporabnika",
     "unknown error" : "neznana napaka",
+    "User ID" : "ID Uporabnika",
     "Enter the one-time code provided by your admin." : "Vstavi enkratno kodo prejetko od administratorja",
     "Authentication code" : "Overitvena koda",
     "Submit" : "Pošlji"

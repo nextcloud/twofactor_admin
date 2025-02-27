@@ -1,8 +1,8 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "User ID" : "Naudotojo ID",
     "unknown error" : "nežinoma klaida",
+    "User ID" : "Naudotojo ID",
     "Authentication code" : "Tapatybės nustatymo kodas",
     "Submit" : "Pateikti"
 },

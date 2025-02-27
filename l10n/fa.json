@@ -1,6 +1,6 @@
 { "translations": {
-    "User ID" : "شناسه کاربر",
     "unknown error" : "unknown error",
+    "User ID" : "شناسه کاربر",
     "Authentication code" : "کد هویت",
     "Submit" : "ارسال"
 },"pluralForm" :"nplurals=2; plural=(n > 1);"

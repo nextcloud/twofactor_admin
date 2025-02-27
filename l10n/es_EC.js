@@ -1,8 +1,8 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "User ID" : "ID de usuario",
     "unknown error" : "error desconocido",
+    "User ID" : "ID de usuario",
     "Authentication code" : "Código de autenticación",
     "Submit" : "Enviar"
 },

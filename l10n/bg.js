@@ -1,8 +1,8 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "User ID" : "Потребителски Идентификатор /Име/",
     "unknown error" : "неизвестна грешка",
+    "User ID" : "Потребителски Идентификатор /Име/",
     "Authentication code" : "Удостоверителен код",
     "Submit" : "Изпращане"
 },
