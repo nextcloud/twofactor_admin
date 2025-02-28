@@ -1,7 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "Admin code" : "Admin-Code",
+    "Admin code" : "Administrationscode",
     "Use a one-time code provided by your admin" : "Einen einmaligen Code verwenden, der von Ihrer Administration bereitgestellt wird",
     "Two-Factor Admin Support" : "Zwei-Faktor-Administrationsunterstützung",
     "Nextcloud Two-Factor Authentication Admin Support Provider" : "Nextcloud Zwei-Faktor-Authentifizierung Administrationsunterstützungs-Anbieter",
