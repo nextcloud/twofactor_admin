@@ -1,5 +1,6 @@
 { "translations": {
     "unknown error" : "άγνωστο σφάλμα",
+    "User ID" : "Ταυτότητα Χρήστη",
     "Authentication code" : "Κωδικός πιστοποίησης",
     "Submit" : "Υποβολή"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
