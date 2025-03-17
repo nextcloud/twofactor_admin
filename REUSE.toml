@@ -12,7 +12,7 @@ SPDX-FileCopyrightText = "2018 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
 
 [[annotations]]
-path = ["package.json", "package-lock.json", ".github/renovate.yml"]
+path = ["package.json", "package-lock.json", ".github/renovate.json"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2019-2025 Nextcloud GmbH and Nextcloud contributors"
 SPDX-License-Identifier = "AGPL-3.0-or-later"
