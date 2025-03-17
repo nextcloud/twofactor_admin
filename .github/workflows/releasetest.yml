@@ -17,7 +17,6 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@67139193614f5b9e8db87da1bd4240922b34d765 # v6.0.0
         with:
-          github-token: ${{ secrets.RELEASE_PAT }}
           skip-git-pull: "true"
           pre-commit: build/pre-commit.js
           release-count: 0
