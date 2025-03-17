@@ -33,5 +33,4 @@ jobs:
         with:
           php-version: 'false'
           node-version: 'false'
-          npm-version: ${{ steps.versions.outputs.npmVersion }}
           tools: 'krankerl'
