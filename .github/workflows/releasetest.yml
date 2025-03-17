@@ -23,14 +23,12 @@ jobs:
           version-file: "package.json, package-lock.json"
           git-push: false
       - name: Read package.json node and npm engines version
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: skjnldsv/read-package-engines-version-actions@06d6baf7d8f41934ab630e97d9e6c0bc9c9ac5e4 # v3
         id: versions
         with:
           fallbackNode: '^16'
           fallbackNpm: '^8'
       - name: Set up Nextcloud env
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: ChristophWurst/setup-nextcloud@fc0790385c175d97e88a7cb0933490de6e990374 # v0.3.2
         with:
           php-version: 'false'
