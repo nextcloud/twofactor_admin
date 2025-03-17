@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 0
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v5
+        uses: TriPSs/conventional-changelog-action@3c4970b6573374889b897403d2f1278c395ea0df # v5
         with:
           github-token: ${{ secrets.RELEASE_PAT }}
           skip-git-pull: "true"
@@ -26,14 +26,14 @@ jobs:
           version-file: "package.json, package-lock.json"
       - name: Read package.json node and npm engines version
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: skjnldsv/read-package-engines-version-actions@v1.1
+        uses: skjnldsv/read-package-engines-version-actions@1e2f46e78e31476bc71ebd909105e6e033d5a6f4 # v1.1
         id: versions
         with:
           fallbackNode: '^16'
           fallbackNpm: '^8'
       - name: Set up Nextcloud env
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: ChristophWurst/setup-nextcloud@v0.3.1
+        uses: ChristophWurst/setup-nextcloud@8bc31fe189b3cb3b44122dede08ce39e8932c554 # v0.3.1
         with:
           php-version: 'false'
           node-version: 'false'
@@ -50,7 +50,7 @@ jobs:
       - name: Create Release in releases organization
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         id: github-release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@de2c0eb89ae2a093876385947365aca7b0e5f844 # v1
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
         with:
@@ -64,7 +64,7 @@ jobs:
         run: echo ${{ steps.github-release.outputs.assets }}
       - name: Upload app to Nextcloud appstore
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: nextcloud-releases/nextcloud-appstore-push-action@v1
+        uses: nextcloud-releases/nextcloud-appstore-push-action@a011fe619bcf6e77ddebc96f9908e1af4071b9c1 # v1
         with:
           app_name: ${{ env.twofactor_admin }}
           appstore_token: ${{ secrets.APPSTORE_TOKEN }}
