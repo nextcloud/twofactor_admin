@@ -1,4 +1,5 @@
 { "translations": {
+    "User ID" : "유저 ID",
     "Authentication code" : "인증 코드",
     "Submit" : "제출"
 },"pluralForm" :"nplurals=1; plural=0;"
