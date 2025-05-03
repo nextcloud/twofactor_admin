@@ -1,5 +1,21 @@
 { "translations": {
+    "Admin code" : "管理者コード",
+    "Use a one-time code provided by your admin" : "管理者が提供するワンタイムコードを使用する",
+    "Two-Factor Admin Support" : "Two-Factor Admin Support",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Nextcloud Two-Factor Authentication管理者サポートプロバイダー",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Nextcloud向けのこの2要素認証 (2FA) プロバイダーにより、管理者はユーザーが2FAで\n\t\t保護されたアカウントにログインするためのワンタイムコードを生成できます。\n\t\tこれは、以前に有効になっていた2FAプロバイダーがなく、ユーザが他の2FA方式または\n\t\t必須の2FAにアクセスできなくなった場合に役立ちます。",
+    "Two-Factor Admin" : "Two-Factor Admin",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "2要素管理プロバイダーを使用すると、ユーザーのワンタイムコードを生成できます。これは、2要素認証を有効にした後の最初のログイン、またはユーザが他の要素にアクセスできなくなった場合に役立ちます。",
+    "Generate a code" : "コードを生成",
+    "user {uid} does not exist" : "ユーザ{uid}は存在しません",
+    "you are not allowed to generate codes for this user" : "このユーザーのコードを生成することは許可されていません",
+    "unknown error" : "不明なエラー",
     "User ID" : "ユーザーID",
+    "Generate" : "生成",
+    "Could not generate a code: {error}" : "コードを生成できませんでした: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "生成されたコードは{code}です。{hours}時間有効です",
+    "Enter the one-time code provided by your admin." : "管理者から提供されたワンタイムコードを入力してください。",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "ログインしたら、再度ログインできるように2要素認証設定を確認してください。",
     "Authentication code" : "認証コード",
     "Submit" : "送信"
 },"pluralForm" :"nplurals=1; plural=0;"
