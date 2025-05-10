@@ -1,5 +1,6 @@
 { "translations": {
     "Two-Factor Admin" : " Kaheastmelise autentimise haldus",
+    "User ID" : "Kasutajatunnus",
     "Authentication code" : "Autentimiskood",
     "Submit" : "Saada"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
