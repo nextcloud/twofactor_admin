@@ -17,7 +17,7 @@ OC.L10N.register(
     "Could not generate a code: {error}" : "Não foi possível gerar um código: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "O código gerado é {code}. Ele tem validade de {hours} horas",
     "Enter the one-time code provided by your admin." : "Insira o código de uso único gerado pelo seu administrador.",
-    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Após logado, verifique sua configuração de autenticação em dois fatores para poder fazer login novamente no futuro.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Após logado, verifique sua configuração de autenticação de dois fatores para poder fazer login novamente no futuro.",
     "Authentication code" : "Código de autenticação",
     "Submit" : "Enviar"
 },
