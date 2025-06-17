@@ -1,13 +1,13 @@
 OC.L10N.register(
     "twofactor_admin",
     {
-    "Admin code" : "Código do Administrador",
+    "Admin code" : "Código do administrador",
     "Use a one-time code provided by your admin" : "Use uma senha única gerada por seu administrador",
-    "Two-Factor Admin Support" : "Suporte de Administrador para Autenticação Dois-Fatores",
-    "Nextcloud Two-Factor Authentication Admin Support Provider" : "O provedor de autenticação de dois fatores do Nextcloud",
-    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Este provedor de autenticação em dois fatores (2FA) para o Nextcloud permite que Administradores\n\t\tgerem códigos para que usuários possam fazer login em suas contas protegidas por 2FA.\n\t\tIsso é útil em situações em que os usuários perderam acesso à autenticação em dois fatores\n\t\te precisam recuperá-lo.",
+    "Two-Factor Admin Support" : "Suporte Administrativo para Autenticação de Dois Fatores",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Provedor para Suporte Administrativo para a Autenticação de Dois Fatores do Nextcloud",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Este provedor de autenticação de dois fatores (2FA) para o Nextcloud permite que os administradores gerem um código único\n\t\tpara que os usuários façam login em uma conta protegida por 2FA. Isso é útil em situações em que\n\t\tos usuários perderam o acesso a seus outros métodos de 2FA ou à 2FA obrigatória sem nenhum\n\t\tprovedor de 2FA previamente habilitado.",
     "Two-Factor Admin" : "Administrador de Dois Fatores",
-    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "O provedor de administrador para dois fatores permite que você gere códigos de uso único para seus usuários. Isso ajudar para o primeiro login após a habilitação de dois fatores ser habilitada ou quando o usuário perder acesso aos seus outros fatores.",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "O provedor de administrador de dois fatores permite que você gere códigos de uso único para seus usuários. Isso ajudar para o primeiro login após a autenticação de dois fatores ser habilitada ou quando o usuário perder acesso aos seus outros fatores.",
     "Generate a code" : "Gerar um código",
     "user {uid} does not exist" : "o usuário {uid} não existe",
     "you are not allowed to generate codes for this user" : "você não tem permissão para gerar códigos para este usuário",
