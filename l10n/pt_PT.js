@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "unknown error" : "erro desconhecido",
     "Authentication code" : "Código de autenticação",
     "Submit" : "Submeter"
 },
