@@ -1,5 +1,22 @@
 { "translations": {
+    "Admin code" : "Msimbo wa msimamizi",
+    "Use a one-time code provided by your admin" : "Tumia msimbo wa mara moja uliotolewa na msimamizi wako",
+    "Two-Factor Admin Support" : "Usaidizi wa msimamizi wa Mambo mawili",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Mtoa Huduma wa Usaidizi wa Msimamizi wa Uthibitishaji wa Mambo mawili ya Nextcloud",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Mtoa huduma huyu wa vipengele viwili (2FA) kwa Nextcloud huruhusu wasimamizi kuzalisha mara moja\n\t\t msimbo wa watumiaji kuingia katika akaunti iliyolindwa ya 2FA. Hii inasaidia katika hali ambapo\n\t\twatumiaji wamepoteza ufikiaji wa njia zao zingine za 2FA au 2FA ya lazima bila yoyote hapo awali\n\t\tkuwasha mtoa huduma wa 2FA.",
+    "Two-Factor Admin" : "Msimamizi wa Mambo mawili",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "Mtoa huduma wa msimamizi wa vipengele viwili hukuruhusu kutengeneza misimbo ya mara moja kwa watumiaji wako. Hii ni muhimu kwa kuingia kwa mara ya kwanza baada ya uthibitishaji wa vipengele viwili kuwezeshwa au wakati watumiaji wanapoteza uwezo wa kufikia vipengele vyao vingine.",
+    "Generate a code" : "Tengeneza msimbo",
+    "user {uid} does not exist" : "mtumiaji {uid} hayupo",
+    "you are not allowed to generate codes for this user" : "huruhusiwi kutoa misimbo ya mtumiaji huyu",
+    "unknown error" : "hitilafu isiyojulikana",
     "User ID" : "Kitambulisho cha mtumiaji",
+    "Generate" : "Tengeneza/zalisha",
+    "Could not generate a code: {error}" : "Haikuweza kuzalisha msimbo: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "Msimbo uliotengenezwa ni {code}. Ni halali kwa saa{hours}",
+    "Enter the one-time code provided by your admin." : "Weka msimbo wa mara moja uliotolewa na msimamizi wako.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Ukishaingia, tafadhali angalia mipangilio yako ya vipengele viwili ili uweze kuingia tena.",
+    "Authentication code" : "Msimbo wa uthibitishaji",
     "Submit" : "Wasilisha"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
 }
