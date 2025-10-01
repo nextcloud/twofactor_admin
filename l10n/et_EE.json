@@ -1,6 +1,21 @@
 { "translations": {
-    "Two-Factor Admin" : " Kaheastmelise autentimise haldus",
+    "Admin code" : "Peakasutaja antud kood",
+    "Use a one-time code provided by your admin" : "Kasuta peakasutaja või haldaja poolt antud koodi",
+    "Two-Factor Admin Support" : "Tugiteenus kaheastmelise autentimise korraldamisel",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Tugiteenus kaheastmelise autentimise korraldamisel Nextcloudis",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "See kaheastmelise autentimise (2FA) teenusepakkuja Nextcloudi jaoks võimaldab peakasutajatel luua kasutajatele üks kord kasutatavaid\n\t\tkoode sisselogimiseks 2FA poolt kaitstud kasutajakontoga. See on abiks olukorras,\n\t\tkus kasutajad ei saa pruukida muid 2FA meetodeid või 2FA kohustuslikkuse\n\t\tkorral pole 2FA teenusepakkujat eelnevalt kasutusele võtnud.",
+    "Two-Factor Admin" : "Kaheastmelise autentimise haldus",
+    "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "See tugiteenus kaheastmelise autentimise korraldamisel aitab sul luua oma kasutajatele ühekordselt pruugitavaid koode. See on abiks olukorras, kus kasutajad ei saa pruukida muid 2FA meetodeid või 2FA kohustuslikkuse korral pole kasutaja 2FA teenusepakkujat eelnevalt kasutusele võtnud.",
+    "Generate a code" : "Loo kood",
+    "user {uid} does not exist" : "kasutajat „{uid}“ pole olemas",
+    "you are not allowed to generate codes for this user" : "sul pole õigust luua sellele kasutajale koode",
+    "unknown error" : "tundmatu viga",
     "User ID" : "Kasutajatunnus",
+    "Generate" : "Loo",
+    "Could not generate a code: {error}" : "Koodi loomine ei õnnestunud: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "Loodud koos on {code} ja ta kehtib {hours} tundi",
+    "Enter the one-time code provided by your admin." : "Sisesta ühekordseks kasutuseks mõeldud kood, mille sulle andis süsteemi haldaja või peakasutaja.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Kui oled sisse loginud, siis järgmiste sisselogimiste toimimise tagamiseks palun kontrolli oma kaheastmelise autentimise seadistusi.",
     "Authentication code" : "Autentimiskood",
     "Submit" : "Saada"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
