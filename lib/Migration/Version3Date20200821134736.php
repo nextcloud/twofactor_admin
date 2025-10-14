@@ -83,7 +83,7 @@ class Version3Date20200821134736 extends SimpleMigrationStep {
 				'expires' => $insert->createParameter('expires'),
 			]);
 
-		$result = $select->execute();
+		$result = $select->executeQuery();
 		while (($row = $result->fetch()) !== false) {
 			if (!isset($row['user_id'], $row['code'])) {
 				continue;
@@ -93,7 +93,7 @@ class Version3Date20200821134736 extends SimpleMigrationStep {
 			$insert->setParameter('code', $row['code'], IQueryBuilder::PARAM_STR);
 			$insert->setParameter('expires', (int)($row['expires'] ?? 0), IQueryBuilder::PARAM_INT);
 
-			$insert->execute();
+			$insert->executeStatement();
 		}
 
 		$result->closeCursor();

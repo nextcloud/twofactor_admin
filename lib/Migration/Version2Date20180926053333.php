@@ -59,7 +59,7 @@ class Version2Date20180926053333 extends SimpleMigrationStep {
 		$updateQuery = $qb->update('twofactor_admin_codes')
 			->set('expires', $qb->createNamedParameter($expires))
 			->where($qb->expr()->isNull('expires'));
-		$updateQuery->execute();
+		$updateQuery->executeStatement();
 	}
 
 }
