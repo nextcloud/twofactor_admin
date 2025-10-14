@@ -28,7 +28,7 @@ class CodeMapper extends QBMapper {
 				'user_id',
 				$qb->createNamedParameter($user->getUID())
 			));
-		$res = $select->execute();
+		$res = $select->executeQuery();
 		$data = $res->fetchColumn(0);
 		$res->closeCursor();
 
@@ -63,7 +63,7 @@ class CodeMapper extends QBMapper {
 				'user_id',
 				$qb->createNamedParameter($user->getUID())
 			));
-		$delete->execute();
+		$delete->executeStatement();
 	}
 
 }
