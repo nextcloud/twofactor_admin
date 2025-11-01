@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/nextcloud/twofactor_admin#readme",
   "dependencies": {
-    "@nextcloud/axios": "^2.5.0",
+    "@nextcloud/axios": "^2.5.2",
     "@nextcloud/l10n": "^3.1.0",
     "@nextcloud/router": "^3.0.1",
     "vue": "^2.7.15"
