@@ -29,7 +29,7 @@
 		<database>sqlite</database>
 		<database>mysql</database>
 		<database>pgsql</database>
-		<nextcloud min-version="28" max-version="31"/>
+		<nextcloud min-version="28" max-version="32"/>
 	</dependencies>
 
 	<two-factor-providers>
