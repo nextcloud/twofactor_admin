@@ -12,8 +12,8 @@ namespace OCA\TwoFactorAdmin\Test\Integration;
 use ChristophWurst\Nextcloud\Testing\DatabaseTransaction;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use ChristophWurst\Nextcloud\Testing\TestUser;
-use OC;
 use OCA\TwoFactorAdmin\Service\CodeStorage;
+use OCP\Server;
 
 class CodeStorageTest extends TestCase {
 
@@ -26,7 +26,7 @@ class CodeStorageTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->codeStorage = OC::$server->query(CodeStorage::class);
+		$this->codeStorage = Server::get(CodeStorage::class);
 	}
 
 	public function testValidateInexistentCode() {

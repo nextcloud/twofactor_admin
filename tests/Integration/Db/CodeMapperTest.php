@@ -12,10 +12,10 @@ namespace OCA\TwoFactorAdmin\Test\Integration\Db;
 use ChristophWurst\Nextcloud\Testing\DatabaseTransaction;
 use ChristophWurst\Nextcloud\Testing\TestCase;
 use ChristophWurst\Nextcloud\Testing\TestUser;
-use OC;
 use OCA\TwoFactorAdmin\Db\Code;
 use OCA\TwoFactorAdmin\Db\CodeMapper;
 use OCP\AppFramework\Db\DoesNotExistException;
+use OCP\Server;
 
 class CodeMapperTest extends TestCase {
 
@@ -28,7 +28,7 @@ class CodeMapperTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->mapper = OC::$server->query(CodeMapper::class);
+		$this->mapper = Server::get(CodeMapper::class);
 	}
 
 	public function testNoEntryExists() {
