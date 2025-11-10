@@ -17,15 +17,15 @@ class StateChanged extends Event {
 	/** @var IUser */
 	private $user;
 
-	public function __construct(IUser $user, private bool $enabled) {
+	public function __construct(
+		IUser $user,
+		private bool $enabled,
+	) {
 		parent::__construct();
 
 		$this->user = $user;
 	}
 
-	/**
-	 * @return IUser
-	 */
 	public function getUser(): IUser {
 		return $this->user;
 	}

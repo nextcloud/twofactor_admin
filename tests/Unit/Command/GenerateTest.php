@@ -43,67 +43,67 @@ class GenerateTest extends TestCase {
 
 	public function testGenerateCodeInvalidUID() {
 		$this->userManager->expects($this->once())
-			->method("get")
-			->with("user1")
+			->method('get')
+			->with('user1')
 			->willReturn(null);
 
 		$ec = $this->command->execute([
-			"uid" => "user1",
+			'uid' => 'user1',
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertStringContainsString("Invalid UID", $output);
+		$this->assertStringContainsString('Invalid UID', $output);
 		$this->assertEquals(1, $ec);
 	}
 
 	public function testGenerateNewCode() {
 		$user = $this->createMock(IUser::class);
 		$this->userManager->expects($this->once())
-			->method("get")
-			->with("user1")
+			->method('get')
+			->with('user1')
 			->willReturn($user);
 		$this->codeStorage->expects($this->once())
-			->method("hasCode")
+			->method('hasCode')
 			->with($user)
 			->willReturn(false);
 		$this->codeStorage->expects($this->once())
-			->method("generateCode")
+			->method('generateCode')
 			->with($user)
-			->willReturn("123456");
+			->willReturn('123456');
 
 		$ec = $this->command->execute([
-			"uid" => "user1",
+			'uid' => 'user1',
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertStringContainsString("Generated new one-time code for user1: 123456", $output);
-		$this->assertStringContainsString("This code is valid for", $output);
+		$this->assertStringContainsString('Generated new one-time code for user1: 123456', $output);
+		$this->assertStringContainsString('This code is valid for', $output);
 		$this->assertEquals(0, $ec);
 	}
 
 	public function testReGenerateCode() {
 		$user = $this->createMock(IUser::class);
 		$this->userManager->expects($this->once())
-			->method("get")
-			->with("user1")
+			->method('get')
+			->with('user1')
 			->willReturn($user);
 		$this->codeStorage->expects($this->once())
-			->method("hasCode")
+			->method('hasCode')
 			->with($user)
 			->willReturn(true);
 		$this->codeStorage->expects($this->once())
-			->method("generateCode")
+			->method('generateCode')
 			->with($user)
-			->willReturn("123456");
+			->willReturn('123456');
 
 		$ec = $this->command->execute([
-			"uid" => "user1",
+			'uid' => 'user1',
 		]);
 
 		$output = $this->command->getDisplay();
-		$this->assertStringContainsString("There is an existing code that will be overwritten.", $output);
-		$this->assertStringContainsString("Generated new one-time code for user1: 123456", $output);
-		$this->assertStringContainsString("This code is valid for", $output);
+		$this->assertStringContainsString('There is an existing code that will be overwritten.', $output);
+		$this->assertStringContainsString('Generated new one-time code for user1: 123456', $output);
+		$this->assertStringContainsString('This code is valid for', $output);
 		$this->assertEquals(0, $ec);
 	}
 

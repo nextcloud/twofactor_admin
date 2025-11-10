@@ -57,12 +57,12 @@ class CodeStorageTest extends TestCase {
 
 	public function testGenerateCode() {
 		$user = $this->createMock(IUser::class);
-		$rand = "123456";
+		$rand = '123456';
 		$this->random->expects($this->once())
-			->method("generate")
+			->method('generate')
 			->willReturn($rand);
 		$this->codeMapper->expects($this->once())
-			->method("insert");
+			->method('insert');
 
 		$code = $this->codeStorage->generateCode($user);
 
@@ -72,7 +72,7 @@ class CodeStorageTest extends TestCase {
 	public function testHasCode() {
 		$user = $this->createMock(IUser::class);
 		$this->codeMapper->expects($this->once())
-			->method("entryExists")
+			->method('entryExists')
 			->willReturn(false);
 
 		$hasCode = $this->codeStorage->hasCode($user);
@@ -83,11 +83,11 @@ class CodeStorageTest extends TestCase {
 	public function testValidateCodeNoneFound() {
 		$user = $this->createMock(IUser::class);
 		$this->codeMapper->expects($this->once())
-			->method("find")
+			->method('find')
 			->with($user)
-			->willThrowException(new DoesNotExistException(""));
+			->willThrowException(new DoesNotExistException(''));
 
-		$valid = $this->codeStorage->validateCode($user, "123456");
+		$valid = $this->codeStorage->validateCode($user, '123456');
 
 		$this->assertFalse($valid);
 	}
@@ -95,11 +95,11 @@ class CodeStorageTest extends TestCase {
 	public function testValidateCodeMoreThanOneFound() {
 		$user = $this->createMock(IUser::class);
 		$this->codeMapper->expects($this->once())
-			->method("find")
+			->method('find')
 			->with($user)
-			->willThrowException(new MultipleObjectsReturnedException(""));
+			->willThrowException(new MultipleObjectsReturnedException(''));
 
-		$valid = $this->codeStorage->validateCode($user, "123456");
+		$valid = $this->codeStorage->validateCode($user, '123456');
 
 		$this->assertFalse($valid);
 	}
@@ -107,13 +107,13 @@ class CodeStorageTest extends TestCase {
 	public function testValidateMismatchingCode() {
 		$user = $this->createMock(IUser::class);
 		$dbCode = new Code();
-		$dbCode->setCode("123456");
+		$dbCode->setCode('123456');
 		$this->codeMapper->expects($this->once())
-			->method("find")
+			->method('find')
 			->with($user)
 			->willReturn($dbCode);
 
-		$valid = $this->codeStorage->validateCode($user, "987654");
+		$valid = $this->codeStorage->validateCode($user, '987654');
 
 		$this->assertFalse($valid);
 	}
@@ -121,17 +121,17 @@ class CodeStorageTest extends TestCase {
 	public function testValidateExpiredCode() {
 		$user = $this->createMock(IUser::class);
 		$dbCode = new Code();
-		$dbCode->setCode("123456");
+		$dbCode->setCode('123456');
 		$dbCode->setExpires(1000);
 		$this->codeMapper->expects($this->once())
-			->method("find")
+			->method('find')
 			->with($user)
 			->willReturn($dbCode);
 		$this->timeFactory->expects($this->once())
 			->method('getTime')
 			->willReturn(1100);
 
-		$valid = $this->codeStorage->validateCode($user, "123456");
+		$valid = $this->codeStorage->validateCode($user, '123456');
 
 		$this->assertFalse($valid);
 	}
@@ -139,17 +139,17 @@ class CodeStorageTest extends TestCase {
 	public function testValidateValidCode() {
 		$user = $this->createMock(IUser::class);
 		$dbCode = new Code();
-		$dbCode->setCode("123456");
+		$dbCode->setCode('123456');
 		$dbCode->setExpires(1000);
 		$this->codeMapper->expects($this->once())
-			->method("find")
+			->method('find')
 			->with($user)
 			->willReturn($dbCode);
 		$this->timeFactory->expects($this->once())
 			->method('getTime')
 			->willReturn(900);
 
-		$valid = $this->codeStorage->validateCode($user, "123456");
+		$valid = $this->codeStorage->validateCode($user, '123456');
 
 		$this->assertTrue($valid);
 	}
@@ -157,7 +157,7 @@ class CodeStorageTest extends TestCase {
 	public function testRemoveCodesForUser() {
 		$user = $this->createMock(IUser::class);
 		$this->codeMapper->expects($this->once())
-			->method("deleteAll")
+			->method('deleteAll')
 			->with($user);
 		$this->eventDispatcher->expects($this->once())
 			->method('dispatch')

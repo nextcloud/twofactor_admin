@@ -21,7 +21,10 @@ class Generate extends Command {
 	/** @var IUserManager */
 	private $userManager;
 
-	public function __construct(private CodeStorage $codeStorage, IUserManager $userManager) {
+	public function __construct(
+		private CodeStorage $codeStorage,
+		IUserManager $userManager,
+	) {
 		parent::__construct();
 		$this->userManager = $userManager;
 	}
@@ -38,14 +41,14 @@ class Generate extends Command {
 		$user = $this->userManager->get($userId);
 
 		if (is_null($user)) {
-			$output->writeln("<error>Invalid UID</error>");
+			$output->writeln('<error>Invalid UID</error>');
 			return 1;
 		}
 
 		if ($this->codeStorage->hasCode($user)) {
 			// TODO: abort? Ask for confirmattion? Add `-f|--force` flag?
-			$output->writeln("<info>There is an existing code that will be overwritten.</info>");
-			$output->writeln("");
+			$output->writeln('<info>There is an existing code that will be overwritten.</info>');
+			$output->writeln('');
 		}
 
 		$code = $this->codeStorage->generateCode($user);

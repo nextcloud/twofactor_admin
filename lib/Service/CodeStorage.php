@@ -32,10 +32,12 @@ class CodeStorage {
 	/** @var ITimeFactory */
 	private $timeFactory;
 
-	public function __construct(private CodeMapper $codeMapper,
+	public function __construct(
+		private CodeMapper $codeMapper,
 		ISecureRandom $random,
 		IEventDispatcher $eventDispatcher,
-		ITimeFactory $timeFactory) {
+		ITimeFactory $timeFactory,
+	) {
 		$this->random = $random;
 		$this->eventDispatcher = $eventDispatcher;
 		$this->timeFactory = $timeFactory;
