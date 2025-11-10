@@ -20,13 +20,13 @@ class ChallengeTemplateTest extends TestCase {
 	protected function setUp(): void {
 		parent::setUp();
 
-		$this->template = new Template("twofactor_admin", "challenge");
+		$this->template = new Template('twofactor_admin', 'challenge');
 	}
 
 	public function testRender() {
 		$html = $this->template->fetchPage();
 
-		$this->assertStringStartsWith("<img", trim($html));
+		$this->assertStringStartsWith('<img', trim($html));
 	}
 
 }

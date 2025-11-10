@@ -31,7 +31,7 @@ class CodeStorageTest extends TestCase {
 
 	public function testValidateInexistentCode() {
 		$user = $this->createTestUser();
-		$code = "123456";
+		$code = '123456';
 
 		$valid = $this->codeStorage->validateCode($user, $code);
 
@@ -42,7 +42,7 @@ class CodeStorageTest extends TestCase {
 		$user = $this->createTestUser();
 		$this->codeStorage->generateCode($user);
 
-		$valid = $this->codeStorage->validateCode($user, "123456");
+		$valid = $this->codeStorage->validateCode($user, '123456');
 
 		$this->assertFalse($valid);
 	}

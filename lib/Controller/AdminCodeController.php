@@ -34,12 +34,14 @@ class AdminCodeController extends Controller {
 	/** @var IUserSession */
 	private $userSession;
 
-	public function __construct(IRequest $request,
+	public function __construct(
+		IRequest $request,
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		ISubAdmin $subAdmin,
 		private CodeStorage $codeStorage,
-		IUserSession $userSession) {
+		IUserSession $userSession,
+	) {
 		parent::__construct(Application::APP_ID, $request);
 		$this->userManager = $userManager;
 		$this->groupManager = $groupManager;
