@@ -1,3 +1,32 @@
+# [4.9.0](https://github.com/nextcloud/twofactor_admin/compare/v4.8.0...v4.9.0) (2025-11-10)
+
+
+### Bug Fixes
+
+* **l10n:** Update translations from Transifex ([fdb0a77](https://github.com/nextcloud/twofactor_admin/commit/fdb0a774aa78c6b889211f0699770fb590161d98))
+* **l10n:** Update translations from Transifex ([848e7e8](https://github.com/nextcloud/twofactor_admin/commit/848e7e8ba5bb09f86dd1a6c1802a73ea6b51cd76))
+* **l10n:** Update translations from Transifex ([287a65d](https://github.com/nextcloud/twofactor_admin/commit/287a65d3063814d90959b2b8a3cfb96655dd96bc))
+* **l10n:** Update translations from Transifex ([c497fee](https://github.com/nextcloud/twofactor_admin/commit/c497feee39a40c8ba16e88f9d88f6735511a7912))
+* **l10n:** Update translations from Transifex ([5912304](https://github.com/nextcloud/twofactor_admin/commit/59123041a7882ca0148a62aedffb86981c2bacfe))
+* **l10n:** Update translations from Transifex ([c1d4bfe](https://github.com/nextcloud/twofactor_admin/commit/c1d4bfedb1817fcbca192e4b94e017bab4d1b9ed))
+* **l10n:** Update translations from Transifex ([f781204](https://github.com/nextcloud/twofactor_admin/commit/f781204fe790cf44333455e76405055edb57f943))
+* **l10n:** Update translations from Transifex ([177ad9a](https://github.com/nextcloud/twofactor_admin/commit/177ad9a275b15020aa2a904a60352b016ccee3c9))
+* **l10n:** Update translations from Transifex ([bfe440d](https://github.com/nextcloud/twofactor_admin/commit/bfe440df20899843013533e9c9c2185df494bf22))
+* **l10n:** Update translations from Transifex ([16b5d00](https://github.com/nextcloud/twofactor_admin/commit/16b5d00f6c0d50f575ffe923875304a9389fc9cd))
+* **l10n:** Update translations from Transifex ([4d1e52a](https://github.com/nextcloud/twofactor_admin/commit/4d1e52a4eb4c0e260942b5ff0753f61cdac89ed5))
+* **l10n:** Update translations from Transifex ([5e83ef7](https://github.com/nextcloud/twofactor_admin/commit/5e83ef78b7652ebf015857d3c4baa6f958297004))
+* **l10n:** Update translations from Transifex ([d69180e](https://github.com/nextcloud/twofactor_admin/commit/d69180e4a9a37d761137dee2fc29874a914123d1))
+* **l10n:** Update translations from Transifex ([3e3c77d](https://github.com/nextcloud/twofactor_admin/commit/3e3c77d75b949cb9179612dc4a67fb88c00fabcb))
+* **l10n:** Update translations from Transifex ([6ed47bf](https://github.com/nextcloud/twofactor_admin/commit/6ed47bf1a299c821f875f29806b3472028ea12c1))
+* **l10n:** Update translations from Transifex ([86e7807](https://github.com/nextcloud/twofactor_admin/commit/86e7807b7f433245e1652fcd491de1a959212e3b))
+
+
+### Features
+
+* **deps:** update support Nextcloud 30-32, PHP 8.1-8.4 ([7c228e7](https://github.com/nextcloud/twofactor_admin/commit/7c228e7c5978f9aabe521d2ac2b44802afce8de1))
+
+
+
 # [4.8.0](https://github.com/nextcloud/twofactor_admin/compare/v4.7.1...v4.8.0) (2025-03-17)
 
 
