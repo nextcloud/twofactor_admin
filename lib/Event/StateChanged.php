@@ -26,9 +26,6 @@ class StateChanged extends Event {
 		$this->user = $user;
 	}
 
-	/**
-	 * @return IUser
-	 */
 	public function getUser(): IUser {
 		return $this->user;
 	}

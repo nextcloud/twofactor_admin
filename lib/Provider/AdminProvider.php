@@ -52,9 +52,7 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 	/**
 	 * Get the template for rending the 2FA provider view
 	 *
-	 * @param IUser $user
 	 *
-	 * @return Template
 	 */
 	public function getTemplate(IUser $user): Template {
 		return new Template($this->appName, 'challenge');
@@ -63,7 +61,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 	/**
 	 * Verify the given challenge
 	 *
-	 * @param IUser $user
 	 *
 	 */
 	public function verifyChallenge(IUser $user, string $challenge): bool {
@@ -72,8 +69,6 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 
 	/**
 	 * Decides whether 2FA is enabled for the given user
-	 *
-	 * @param IUser $user
 	 */
 	public function isTwoFactorAuthEnabledForUser(IUser $user): bool {
 		return $this->codeStorage->hasCode($user);

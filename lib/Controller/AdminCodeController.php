@@ -52,7 +52,6 @@ class AdminCodeController extends Controller {
 	/**
 	 *
 	 * @SubAdminRequired
-	 * @return JSONResponse
 	 */
 	public function create(string $uid): JSONResponse {
 		$currentUser = $this->userSession->getUser();
