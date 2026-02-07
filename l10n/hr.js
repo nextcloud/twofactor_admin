@@ -1,6 +1,8 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "User ID" : "ID korisnika",
+    "Generate" : "Generiraj",
     "Authentication code" : "Šifra za autentifikaciju",
     "Submit" : "Šalji"
 },
