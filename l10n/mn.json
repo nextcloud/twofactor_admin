@@ -1,4 +1,6 @@
 { "translations": {
+    "User ID" : "Хэрэглэгчийн ID",
+    "Generate" : "Үүсгэх",
     "Authentication code" : "танилтын код",
     "Submit" : "мэдэгдэх"
 },"pluralForm" :"nplurals=2; plural=(n != 1);"
