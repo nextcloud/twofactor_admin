@@ -1,3 +1,29 @@
+# [4.10.0](https://github.com/nextcloud/twofactor_admin/compare/v4.9.0...v4.10.0) (2026-03-12)
+
+
+### Bug Fixes
+
+* **l10n:** Update translations from Transifex ([ee2c32f](https://github.com/nextcloud/twofactor_admin/commit/ee2c32f38307bfbbdc3e9ae977faff30bf0adcae))
+* **l10n:** Update translations from Transifex ([d78686d](https://github.com/nextcloud/twofactor_admin/commit/d78686d568004cda6b8ef4c25d1c954e3845dfad))
+* **l10n:** Update translations from Transifex ([a634db9](https://github.com/nextcloud/twofactor_admin/commit/a634db9f27cace9782db4b8f0580fa280cfa23f4))
+* **l10n:** Update translations from Transifex ([893ce1d](https://github.com/nextcloud/twofactor_admin/commit/893ce1d3116dab5617c4cf59ed7acfde91d04585))
+* **l10n:** Update translations from Transifex ([4f8da8d](https://github.com/nextcloud/twofactor_admin/commit/4f8da8d212ff871863e9feb536bb84bd9d05bdb4))
+* **l10n:** Update translations from Transifex ([0916004](https://github.com/nextcloud/twofactor_admin/commit/0916004b5ae980566291dbc58ee15305c13480d4))
+* **l10n:** Update translations from Transifex ([284bce6](https://github.com/nextcloud/twofactor_admin/commit/284bce6654793c556ad28f440be102176411f139))
+* **l10n:** Update translations from Transifex ([30103b0](https://github.com/nextcloud/twofactor_admin/commit/30103b0fafc974962f0c94f9d83e598691fabae5))
+* **l10n:** Update translations from Transifex ([54b5a67](https://github.com/nextcloud/twofactor_admin/commit/54b5a67038194789d04d0e50aad334974d9bcb7c))
+* **l10n:** Update translations from Transifex ([4c8db62](https://github.com/nextcloud/twofactor_admin/commit/4c8db624004702b04b71c2a5828d14fcc14d940a))
+* **l10n:** Update translations from Transifex ([098e60c](https://github.com/nextcloud/twofactor_admin/commit/098e60c4d4d87f8a574ac91f20c13c08f4252e37))
+* **l10n:** Update translations from Transifex ([94af843](https://github.com/nextcloud/twofactor_admin/commit/94af843bb97dbe8b89fe92e14d70d92a7d72e7a4))
+
+
+### Features
+
+* **deps:** add support for PHP 8.5 ([a00d381](https://github.com/nextcloud/twofactor_admin/commit/a00d381054135f53d3e8a737df9cb6b0b7a047cb))
+* **deps:** add support Nextcloud 33 ([01dc84f](https://github.com/nextcloud/twofactor_admin/commit/01dc84f79279df897e08ababb66689065069e5e2))
+
+
+
 # [4.9.0](https://github.com/nextcloud/twofactor_admin/compare/v4.8.0...v4.9.0) (2025-11-10)
 
 
