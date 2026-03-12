@@ -11,7 +11,7 @@ jobs:
     runs-on: [ubuntu-latest, self-hosted]
     steps:
       - name: Checkout repository
-        uses:  actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           token: ${{ secrets.RELEASE_PAT }}
           fetch-depth: 0
@@ -29,16 +29,16 @@ jobs:
         uses: skjnldsv/read-package-engines-version-actions@06d6baf7d8f41934ab630e97d9e6c0bc9c9ac5e4 # v3
         id: versions
         with:
-          fallbackNode: '^16'
-          fallbackNpm: '^8'
+          fallbackNode: "^16"
+          fallbackNpm: "^8"
       - name: Set up Nextcloud env
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         uses: ChristophWurst/setup-nextcloud@14cf58de73855aa30212721e8177ca45626e4477 # v0.4.2
         with:
-          php-version: 'false'
+          php-version: "false"
           node-version: ${{ steps.versions.outputs.nodeVersion }}
           npm-version: ${{ steps.versions.outputs.npmVersion }}
-          tools: 'krankerl'
+          tools: "krankerl"
       - name: Package app
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         run: krankerl package
@@ -55,7 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           files: build/artifacts/twofactor_admin.tar.gz
           repository: nextcloud-releases/twofactor_admin
