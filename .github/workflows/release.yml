@@ -33,7 +33,7 @@ jobs:
           fallbackNpm: '^8'
       - name: Set up Nextcloud env
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
-        uses: ChristophWurst/setup-nextcloud@fc0790385c175d97e88a7cb0933490de6e990374 # v0.3.2
+        uses: ChristophWurst/setup-nextcloud@14cf58de73855aa30212721e8177ca45626e4477 # v0.4.2
         with:
           php-version: 'false'
           node-version: ${{ steps.versions.outputs.nodeVersion }}
