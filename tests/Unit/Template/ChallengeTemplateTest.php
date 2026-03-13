@@ -26,7 +26,7 @@ class ChallengeTemplateTest extends TestCase {
 	public function testRender() {
 		$html = $this->template->fetchPage();
 
-		$this->assertStringStartsWith('<img', trim($html));
+		$this->assertStringStartsWith('<img', trim((string)$html));
 	}
 
 }

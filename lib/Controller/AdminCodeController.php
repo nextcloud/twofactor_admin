@@ -39,7 +39,7 @@ class AdminCodeController extends Controller {
 		IUserManager $userManager,
 		IGroupManager $groupManager,
 		ISubAdmin $subAdmin,
-		private CodeStorage $codeStorage,
+		private readonly CodeStorage $codeStorage,
 		IUserSession $userSession,
 	) {
 		parent::__construct(Application::APP_ID, $request);

@@ -21,10 +21,10 @@ use OCP\Template;
 class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin {
 
 	public function __construct(
-		private string $appName,
-		private IL10N $l10n,
-		private IURLGenerator $urlGenerator,
-		private CodeStorage $codeStorage,
+		private readonly string $appName,
+		private readonly IL10N $l10n,
+		private readonly IURLGenerator $urlGenerator,
+		private readonly CodeStorage $codeStorage,
 	) {
 	}
 
@@ -83,11 +83,11 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 		$this->codeStorage->removeCodesForUser($user);
 	}
 
-	public function getLightIcon(): String {
+	public function getLightIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'actions/more-white.svg');
 	}
 
-	public function getDarkIcon(): String {
+	public function getDarkIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'actions/more.svg');
 	}
 }
