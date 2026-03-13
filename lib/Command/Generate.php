@@ -22,7 +22,7 @@ class Generate extends Command {
 	private $userManager;
 
 	public function __construct(
-		private CodeStorage $codeStorage,
+		private readonly CodeStorage $codeStorage,
 		IUserManager $userManager,
 	) {
 		parent::__construct();

@@ -22,7 +22,7 @@ class StateChangeRegistryUpdater implements IEventListener {
 
 	public function __construct(
 		IRegistry $registry,
-		private AdminProvider $provider,
+		private readonly AdminProvider $provider,
 	) {
 		$this->registry = $registry;
 	}

@@ -21,10 +21,10 @@ use OCP\Template;
 class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin {
 
 	public function __construct(
-		private string $appName,
-		private IL10N $l10n,
-		private IURLGenerator $urlGenerator,
-		private CodeStorage $codeStorage,
+		private readonly string $appName,
+		private readonly IL10N $l10n,
+		private readonly IURLGenerator $urlGenerator,
+		private readonly CodeStorage $codeStorage,
 	) {
 	}
 
