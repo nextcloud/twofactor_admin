@@ -83,11 +83,11 @@ class AdminProvider implements IProvider, IProvidesIcons, IDeactivatableByAdmin 
 		$this->codeStorage->removeCodesForUser($user);
 	}
 
-	public function getLightIcon(): String {
+	public function getLightIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'actions/more-white.svg');
 	}
 
-	public function getDarkIcon(): String {
+	public function getDarkIcon(): string {
 		return $this->urlGenerator->imagePath('core', 'actions/more.svg');
 	}
 }
