@@ -17,7 +17,7 @@ return RectorConfig::configure()
 		__DIR__ . '/templates',
 		__DIR__ . '/tests',
 	])
-	->withPhpSets(php80: true)
+	->withPhpSets(php81: true)
 	->withTypeCoverageLevel(0)
 	->withImportNames(importShortClasses:false)
 	->withPreparedSets(
@@ -27,8 +27,7 @@ return RectorConfig::configure()
 		earlyReturn: true,
 		instanceOf: true,
 		privatization: true,
-		strictBooleans: true,
 	)
 	->withSets([
-		NextcloudSets::NEXTCLOUD_27,
+		NextcloudSets::NEXTCLOUD_30,
 	]);

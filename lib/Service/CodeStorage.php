@@ -33,7 +33,7 @@ class CodeStorage {
 	private $timeFactory;
 
 	public function __construct(
-		private CodeMapper $codeMapper,
+		private readonly CodeMapper $codeMapper,
 		ISecureRandom $random,
 		IEventDispatcher $eventDispatcher,
 		ITimeFactory $timeFactory,

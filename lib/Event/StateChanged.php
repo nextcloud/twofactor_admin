@@ -19,7 +19,7 @@ class StateChanged extends Event {
 
 	public function __construct(
 		IUser $user,
-		private bool $enabled,
+		private readonly bool $enabled,
 	) {
 		parent::__construct();
 
