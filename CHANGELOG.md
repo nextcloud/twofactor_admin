@@ -1,3 +1,12 @@
+# [4.11.0](https://github.com/nextcloud/twofactor_admin/compare/v4.10.0...v4.11.0) (2026-03-16)
+
+
+### Features
+
+* **php:** run rector for PHP 8.1 syntax ([ca50231](https://github.com/nextcloud/twofactor_admin/commit/ca502313039b605e98d47ae75e418a65d95be7fe))
+
+
+
 # [4.10.0](https://github.com/nextcloud/twofactor_admin/compare/v4.9.0...v4.10.0) (2026-03-12)
 
 
