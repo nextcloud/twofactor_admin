@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "User ID" : "זיהוי משתמש",
     "Authentication code" : "קוד אימות",
     "Submit" : "שליחה"
 },
