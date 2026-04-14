@@ -12,25 +12,22 @@ namespace OCA\TwoFactorAdmin\AppInfo;
 use OCA\TwoFactorAdmin\Event\StateChanged;
 use OCA\TwoFactorAdmin\Listener\StateChangeRegistryUpdater;
 use OCP\AppFramework\App;
-use OCP\AppFramework\IAppContainer;
-use OCP\EventDispatcher\IEventDispatcher;
+use OCP\AppFramework\Bootstrap\IBootContext;
+use OCP\AppFramework\Bootstrap\IBootstrap;
+use OCP\AppFramework\Bootstrap\IRegistrationContext;
 
-class Application extends App {
+class Application extends App implements IBootstrap {
 
 	public const APP_ID = 'twofactor_admin';
 
 	public function __construct(array $urlParams = []) {
 		parent::__construct(self::APP_ID, $urlParams);
-
-		$container = $this->getContainer();
-		$this->registerListeners($container);
 	}
 
-	private function registerListeners(IAppContainer $container): void {
-		/** @var IEventDispatcher $dispatcher */
-		$dispatcher = $container->query(IEventDispatcher::class);
-
-		$dispatcher->addServiceListener(StateChanged::class, StateChangeRegistryUpdater::class);
+	public function register(IRegistrationContext $context): void {
+		$context->registerEventListener(StateChanged::class, StateChangeRegistryUpdater::class);
 	}
 
+	public function boot(IBootContext $context): void {
+	}
 }
