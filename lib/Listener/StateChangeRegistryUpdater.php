@@ -15,16 +15,14 @@ use OCP\Authentication\TwoFactorAuth\IRegistry;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 
+/**
+ * @template-implements IEventListener<StateChanged>
+ */
 class StateChangeRegistryUpdater implements IEventListener {
-
-	/** @var IRegistry */
-	private $registry;
-
 	public function __construct(
-		IRegistry $registry,
+		private readonly IRegistry $registry,
 		private readonly AdminProvider $provider,
 	) {
-		$this->registry = $registry;
 	}
 
 	public function handle(Event $event): void {
