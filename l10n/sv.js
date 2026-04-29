@@ -3,6 +3,10 @@ OC.L10N.register(
     {
     "Admin code" : "Administratörskod",
     "Use a one-time code provided by your admin" : "Använd den engångskod som du fått av din administratör",
+    "Two-Factor Admin Support" : "2FA Admin Support",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Leverantör av administrativ support för tvåfaktorsautentisering i Nextcloud",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Denna leverantör av tvåfaktorsautentisering (2FA) för Nextcloud gör det möjligt för administratörer att generera en engångskod\nsom användarna kan använda för att logga in på ett 2FA-skyddat konto. Detta är användbart i situationer där\nanvändare har förlorat tillgången till sina andra 2FA-metoder eller vid obligatorisk 2FA utan att någon\n2FA-leverantör tidigare har aktiverats.",
+    "Two-Factor Admin" : "2FA Admin",
     "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "Med hjälp av tjänsten för tvåfaktorsautentisering kan du skapa engångskoder åt dina användare. Detta är användbart vid den första inloggningen efter att tvåfaktorsautentisering har aktiverats eller om användarna förlorar tillgången till sina andra autentiseringsfaktorer.",
     "Generate a code" : "Skapa en kod",
     "user {uid} does not exist" : "användaren {uid} finns inte",
