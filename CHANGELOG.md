@@ -1,3 +1,21 @@
+## [4.11.2-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.1...v4.11.2-rc.0) (2026-05-04)
+
+
+### Bug Fixes
+
+* **l10n:** Update translations from Transifex ([c62583f](https://github.com/nextcloud/twofactor_admin/commit/c62583f5b0b6d3004583770b7335771c010e4cc0))
+* **l10n:** Update translations from Transifex ([4def1e2](https://github.com/nextcloud/twofactor_admin/commit/4def1e263107011a924c8f4ca8894d380f98dfee))
+* **l10n:** Update translations from Transifex ([7390ff8](https://github.com/nextcloud/twofactor_admin/commit/7390ff857a9acc6415d9cfbfc551cfc16c4ceab1))
+* **l10n:** Update translations from Transifex ([942cf78](https://github.com/nextcloud/twofactor_admin/commit/942cf784432745666df3779005e98a35348c0561))
+
+
+### Features
+
+* **deps:** add support Nextcloud 34 ([20fd9d0](https://github.com/nextcloud/twofactor_admin/commit/20fd9d090c8be4e4633c80fa0147f48d32c25972))
+* **deps:** drop support for Nextcloud 32 ([1dc318a](https://github.com/nextcloud/twofactor_admin/commit/1dc318a80a72227b1bd0fdc3bb7b79268a7f9b18))
+
+
+
 ## [4.11.1](https://github.com/nextcloud/twofactor_admin/compare/v4.11.0...v4.11.1) (2026-03-26)
 
 
