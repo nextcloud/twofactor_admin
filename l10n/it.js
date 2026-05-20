@@ -1,12 +1,23 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "Admin code" : "Codice amministratore",
     "Use a one-time code provided by your admin" : "Utilizza un codice monouso fornito dal tuo amministratore",
+    "Two-Factor Admin Support" : "Supporto amministratore per l’autenticazione a due fattori",
+    "Nextcloud Two-Factor Authentication Admin Support Provider" : "Fornitore del supporto amministrativo per l’autenticazione a due fattori di Nextcloud",
+    "This two-factor auth (2FA) provider for Nextcloud allows admins to generate a one-time\n\t\tcode for users to log into a 2FA protected account. This is helpful in situations where\n\t\tusers have lost access to their other 2FA methods or mandatory 2FA without any previously\n\t\tenabled 2FA provider." : "Questo provider di autenticazione a due fattori (2FA) per Nextcloud consente agli amministratori di generare un codice monouso per permettere agli utenti di accedere a un account protetto da 2FA. Questa funzione è utile nei casi in cui gli utenti abbiano perso l’accesso agli altri metodi 2FA oppure quando il 2FA obbligatorio è attivo senza che sia stato precedentemente configurato un provider 2FA.",
+    "Two-Factor Admin" : "Amministrazione autenticazione a due fattori",
     "The two-factor admin provider allows you to generate one-time codes for your users. This is helpful for the first login after two-factor authentication has been enabled or when the users lose access to their other factors." : "Il provider di amministrazione a due fattori ti consente di generare codici monouso per i tuoi utenti. Ciò è utile per il primo accesso dopo che è stata abilitata l'autenticazione a due fattori o quando gli utenti perdono l'accesso agli altri fattori.",
     "Generate a code" : "Genera un codice",
+    "user {uid} does not exist" : "l'utente {uid} non esiste",
+    "you are not allowed to generate codes for this user" : "non è consentito generare codici per questo utente",
     "unknown error" : "errore sconosciuto",
     "User ID" : "ID utente",
     "Generate" : "Genera",
+    "Could not generate a code: {error}" : "Non è stato possibile generare un codice: {error}",
+    "The generated code is {code}. It is valid for {hours} hours" : "Il codice generato è {code}. Sarà valido per {hours} ore",
+    "Enter the one-time code provided by your admin." : "Inserire il codice monouso generato dall'amministratore.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Una volta effettuato l’accesso, controllare le impostazioni dell’autenticazione a due fattori per poter accedere nuovamente.",
     "Authentication code" : "Codice di autenticazione",
     "Submit" : "Invia"
 },
