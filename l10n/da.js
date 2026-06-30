@@ -6,6 +6,7 @@ OC.L10N.register(
     "Two-Factor Admin Support" : "To-faktor admin support",
     "unknown error" : "ukendt fejl",
     "User ID" : "Bruger ID",
+    "Generate" : "Generér",
     "Authentication code" : "Godkendelses kode",
     "Submit" : "Tilføj"
 },
