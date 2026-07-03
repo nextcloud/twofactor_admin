@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "Admin code" : "Código do administrador",
     "Use a one-time code provided by your admin" : "Use uma senha única gerada por seu administrador",
     "Two-Factor Admin Support" : "Suporte Administrativo para Autenticação de Dois Fatores",
     "Nextcloud Two-Factor Authentication Admin Support Provider" : "Provedor para Suporte Administrativo para a Autenticação de Dois Fatores do Nextcloud",
@@ -12,8 +13,10 @@ OC.L10N.register(
     "unknown error" : "erro desconhecido",
     "User ID" : "ID do usuário",
     "Generate" : "Gerar",
+    "Could not generate a code: {error}" : "Não foi possível gerar um código: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "O código gerado é {code}. Ele tem validade de {hours} horas",
     "Enter the one-time code provided by your admin." : "Insira o código de uso único gerado pelo seu administrador.",
+    "Once logged in, please check your two-factor settings in order to be able to log in again." : "Após logado, verifique sua configuração de autenticação de dois fatores para poder fazer login novamente no futuro.",
     "Authentication code" : "Código de autenticação",
     "Submit" : "Submeter"
 },
