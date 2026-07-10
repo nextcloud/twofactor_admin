@@ -1,3 +1,23 @@
+# [4.12.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.2-rc.0...v4.12.0) (2026-07-10)
+
+
+### Bug Fixes
+
+* **l10n:** Update translations from Transifex ([a222f20](https://github.com/nextcloud/twofactor_admin/commit/a222f20a7f453c7a55742da21e79c9718827de25))
+* **l10n:** Update translations from Transifex ([a22de38](https://github.com/nextcloud/twofactor_admin/commit/a22de38073352046aa322ea283841c9771b8f44f))
+* **l10n:** Update translations from Transifex ([6940b18](https://github.com/nextcloud/twofactor_admin/commit/6940b188a3e07d745b4fc25f92856e00b98df263))
+* **l10n:** Update translations from Transifex ([5555bff](https://github.com/nextcloud/twofactor_admin/commit/5555bffc434aa364e88680d38e97dd4fe56c8ad5))
+* **l10n:** Update translations from Transifex ([49badf9](https://github.com/nextcloud/twofactor_admin/commit/49badf9cc2761d69e2b7927df3845593146e0faf))
+* **l10n:** Update translations from Transifex ([7df2495](https://github.com/nextcloud/twofactor_admin/commit/7df2495dd3fd2e4a16fdcf4f5029c90921f514b8))
+* **l10n:** Update translations from Transifex ([52bc073](https://github.com/nextcloud/twofactor_admin/commit/52bc073ceb7ddcbca83d16867d1451e4ec4459e1))
+* **l10n:** Update translations from Transifex ([b584de9](https://github.com/nextcloud/twofactor_admin/commit/b584de91298a32196c9c43f9691fd46b9f81fee6))
+* **l10n:** Update translations from Transifex ([25aedad](https://github.com/nextcloud/twofactor_admin/commit/25aedadba10fdf4f6f3100c4e6d2e889070d965e))
+* **l10n:** Update translations from Transifex ([601c796](https://github.com/nextcloud/twofactor_admin/commit/601c796efe32de22055a8fd12227eeec250673a4))
+* **l10n:** Update translations from Transifex ([588f1c9](https://github.com/nextcloud/twofactor_admin/commit/588f1c9f583b79eb1c3609d041e718179cfcf439))
+* **l10n:** Update translations from Transifex ([6aa4461](https://github.com/nextcloud/twofactor_admin/commit/6aa44614c39337077bf9b7f7bf82527dfb2bd17a))
+
+
+
 ## [4.11.2-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.1...v4.11.2-rc.0) (2026-05-04)
 
 
