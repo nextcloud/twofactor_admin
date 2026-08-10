@@ -35,7 +35,7 @@ class Generate extends Command {
 		$this->addArgument('uid', InputArgument::REQUIRED);
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output) {
+	protected function execute(InputInterface $input, OutputInterface $output): int {
 		$userId = $input->getArgument('uid');
 
 		$user = $this->userManager->get($userId);
