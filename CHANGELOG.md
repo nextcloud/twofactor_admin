@@ -1,3 +1,19 @@
+# [4.13.0-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.12.0...v4.13.0-rc.0) (2026-08-26)
+
+
+### Bug Fixes
+
+* **commands:** Adapt execute method signature to newer version ([f0196c4](https://github.com/nextcloud/twofactor_admin/commit/f0196c4e550d7d0f6287ec37b6695412454c1c5f))
+* **l10n:** Update translations from Transifex ([045f2e4](https://github.com/nextcloud/twofactor_admin/commit/045f2e4f84fb8cf7a1ad502d35bda449c7364fbf))
+* **l10n:** Update translations from Transifex ([98ebb8b](https://github.com/nextcloud/twofactor_admin/commit/98ebb8bf05d044f3abebff364fb4c8ed9834af2a))
+
+
+### Features
+
+* Add support for NC35 ([50b4ade](https://github.com/nextcloud/twofactor_admin/commit/50b4ade86220f054d0533f3ec728c6a0ffd43904))
+
+
+
 # [4.12.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.2-rc.0...v4.12.0) (2026-07-10)
 
 
