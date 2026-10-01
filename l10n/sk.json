@@ -10,7 +10,7 @@
     "user {uid} does not exist" : "užívateľ {uid} neexistuje",
     "you are not allowed to generate codes for this user" : "nemáte povolené generovať kódy pre tohto používateľa",
     "unknown error" : "neznáma chyba",
-    "User ID" : "ID užívateľa",
+    "User ID" : "ID používateľa",
     "Generate" : "Vygenerovať",
     "Could not generate a code: {error}" : "Nepodarilo sa vygenerovať kód: {error}",
     "The generated code is {code}. It is valid for {hours} hours" : "Vygenerovaný kód je {code}. Je platný po dobu {hours} hodín ",
