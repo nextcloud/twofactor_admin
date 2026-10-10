@@ -1,3 +1,14 @@
+# [4.13.0](https://github.com/nextcloud/twofactor_admin/compare/v4.12.0...v4.13.0) (2026-10-10)
+
+### Features
+
+* Add support for Nextcloud 35 ([50b4ade](https://github.com/nextcloud/twofactor_admin/commit/50b4ade86220f054d0533f3ec728c6a0ffd43904))
+
+### Bug Fixes
+
+* **commands:** Adapt execute method signature to newer version ([f0196c4](https://github.com/nextcloud/twofactor_admin/commit/f0196c4e550d7d0f6287ec37b6695412454c1c5f))
+* **l10n:** Update translations from Transifex
+
 # [4.13.0-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.12.0...v4.13.0-rc.0) (2026-08-26)
 
 
