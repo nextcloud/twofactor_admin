@@ -1,4 +1,17 @@
-# [4.13.0-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.12.0...v4.13.0-rc.0) (2026-08-26)
+# [4.13.0](https://github.com/nextcloud/twofactor_admin/compare/v4.12.0...v4.13.0) (2026-10-12)
+
+
+### Bug Fixes
+
+* **l10n:** Update translations from Transifex ([1c51f25](https://github.com/nextcloud/twofactor_admin/commit/1c51f25ced02f0d2b58cdba8953ad2280c789ba2))
+* **l10n:** Update translations from Transifex ([36c5ec3](https://github.com/nextcloud/twofactor_admin/commit/36c5ec306ce0d866093a8b52a9d60d718a89c270))
+* **l10n:** Update translations from Transifex ([e2384d9](https://github.com/nextcloud/twofactor_admin/commit/e2384d90a62ca683458c4f1d57fbd71e55d50753))
+* **l10n:** Update translations from Transifex ([66febac](https://github.com/nextcloud/twofactor_admin/commit/66febac62eef8d1e210ee63e5ce479782ce5ef4f))
+* **l10n:** Update translations from Transifex ([c77297f](https://github.com/nextcloud/twofactor_admin/commit/c77297ff6746eb89338180e1a02671c18873079b))
+
+
+
+# 4.13.0-rc.0 (2026-08-26)
 
 
 ### Bug Fixes
@@ -14,7 +27,7 @@
 
 
 
-# [4.12.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.2-rc.0...v4.12.0) (2026-07-10)
+# [4.12.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.1...v4.12.0) (2026-07-10)
 
 
 ### Bug Fixes
@@ -34,7 +47,7 @@
 
 
 
-## [4.11.2-rc.0](https://github.com/nextcloud/twofactor_admin/compare/v4.11.1...v4.11.2-rc.0) (2026-05-04)
+## 4.11.2-rc.0 (2026-05-04)
 
 
 ### Bug Fixes
