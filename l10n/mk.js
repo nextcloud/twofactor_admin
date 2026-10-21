@@ -1,6 +1,7 @@
 OC.L10N.register(
     "twofactor_admin",
     {
+    "User ID" : "Корисничко ID",
     "Authentication code" : "Код за автентификација",
     "Submit" : "Испрати"
 },
